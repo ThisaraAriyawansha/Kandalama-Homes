@@ -4,7 +4,25 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}", // Specify the paths to your components
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        milonga: ['Milonga', 'sans-serif'],
+        megrim: ['Megrim', 'sans-serif'],
+        prata: ['Prata', 'serif'],
+        poppins: ['Poppins', 'sans-serif'], // Added Poppins font
+      },
+      fontSize: {
+        '96px': '96px',
+        '20px': '20px', // Added 20px font size
+      },
+      lineHeight: {
+        '96px': '96px',
+        '54px': '54px', // Added 54px line height
+      },
+      colors: {
+        customGreen: '#005A4E',
+      },
+    },
   },
   plugins: [],
 };
