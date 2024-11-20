@@ -16,24 +16,21 @@ const KandalamaHomes = () => {
         {/* Overlay */}
         <div className="absolute inset-0 flex flex-col px-4 text-left items-start justify-start bg-gradient-to-r from-black/70 to-[#542C01]/40 rounded-[47px] z-10">
           {/* Description Text */}
-          <p className="mx-auto  font-light text-white md:text-xl w-[80%] max-w-[1086px] absolute top-[365px] left-[102px] text-base leading-relaxed z-20">
+          <p className="absolute top-[565px] left-[102px] font-light text-white text-lg leading-relaxed z-20 w-[1086px]">
             A construction site thumbnail could feature a busy worksite with cranes, workers in safety
             <br />
-            gear, and partially built structures. workers in safety gear, and partially built structures.
+            gear, and partially built structures. Workers in safety gear, and partially built structures.
           </p>
 
           {/* Main Title */}
-            <h1 className="my-4 text-6xl tracking-wide text-white md:text-7xl absolute top-[450px] left-[102px] text-[150px] font-milonga font-[400] text-shadow-xl z-20">
+          <h1 className="absolute top-[650px] left-[102px] text-[120px] font-milonga font-[400] tracking-wide text-shadow-xl z-20">
             Kandalama
-            </h1>
-
-
+          </h1>
 
           {/* Subtitle */}
-          <h2 className="text-4xl text-white md:text-5xl absolute top-[600px] left-[102px] text-[96px] font-megrim font-[500] leading-tight text-shadow-xl z-30">
+          <h2 className="absolute top-[820px] left-[102px] text-[100px] font-megrim font-[500] leading-tight text-shadow-xl z-30">
             Homes
-            </h2>
-
+          </h2>
         </div>
       </section>
     </div>
