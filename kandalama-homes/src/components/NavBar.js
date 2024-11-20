@@ -6,8 +6,8 @@ const Navbar = () => {
       <nav
         className="flex items-center justify-between px-16 py-4 text-black bg-white shadow-md"
         style={{
-          width: "768px", // Set the width to 100% to span the full screen
-          height: "100px", // Set the height to 100px
+          width: "650px", // Set the width to 100% to span the full screen
+          height: "70px", // Set the height to 100px
           top: "0", // Position the navbar at the top of the screen
           right:"0",
           position: "fixed", // Fix the navbar at the top of the page
