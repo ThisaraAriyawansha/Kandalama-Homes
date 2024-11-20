@@ -29,41 +29,58 @@ const OurProjects = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <h2 className="mb-8 text-4xl font-bold text-center text-gray-800 font-quando">OUR PROJECTS</h2>
         <p className="mb-12 text-center text-black font-poppins">
-          A construction site is a bustling environment where buildings, roads, or other infrastructure projects come to life. 
-          {/* Add the rest of your paragraph here */}
-        </p>
+        A construction site is a bustling environment where buildings, roads, or other infrastructure projects come to life. It is filled with the sights and<br/>
+         sounds of progress, including heavy machinery like cranes, excavators, and bulldozers, alongside teams of workers in safety gear<br/>
+          collaborating to meet project goals. Safety is a top priority, with protocols in place to ensure the well-being of everyone involved. Materials<br/>
+           such as steel, concrete, and lumber are strategically moved and assembled as blueprints transform into reality. The dynamic atmosphere<br/>
+            reflects both the complexity and precision required to bring architectural visions to completion.        </p>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="overflow-hidden transition-shadow duration-300 rounded-lg shadow-md bg-customGreen hover:shadow-lg"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} // Animation happens once when it comes into view
-            >
-              <div className="relative">
-                {/* Image */}
-                <img src={project.image} alt={project.title} className="object-cover w-full h-56" />
-
-                {/* Title Container */}
-                <div className="absolute left-0 w-1/4 p-2 transform -translate-y-1/2 bg-white rounded-r-md top-3/4">
-                  <h3 className="text-lg font-semibold text-customGreen font-prata">{project.title}</h3>
-                </div>
-              </div>
-
-              {/* Description */}
-              <div className="p-6">
-                <p className="text-center text-white font-poppins">{project.description}</p>
-              </div>
-            </motion.div>
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
       </div>
     </section>
+  );
+};
+
+// Project Card Component
+const ProjectCard = ({ project, index }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5, // Trigger the animation when 50% of the element is in view
+  });
+
+  return (
+<motion.div
+  ref={ref} // Reference for the scroll detection
+  className="overflow-hidden transition-shadow duration-300 rounded-lg shadow-md bg-customGreen hover:shadow-lg hover:scale-105 transform-gpu"
+  initial={{ opacity: 0, y: 100 }} // Initial state
+  animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }} // Animated state based on scroll visibility
+  transition={{ delay: index * 0.2, duration: 1 }} // Transition details
+>
+  <div className="relative group"> {/* Group for hover effects */}
+    {/* Image */}
+    <img
+      src={project.image}
+      alt={project.title}
+      className="object-cover w-full h-56 transition-transform duration-300 group-hover:scale-110" // Image hover effect
+    />
+
+    {/* Title Container */}
+    <div className="absolute left-0 w-1/4 p-2 transform -translate-y-1/2 bg-white rounded-r-md top-3/4">
+      <h3 className="text-lg font-semibold text-customGreen font-prata">{project.title}</h3>
+    </div>
+  </div>
+
+  {/* Description */}
+  <div className="p-6">
+    <p className="text-center text-white font-poppins">{project.description}</p>
+  </div>
+</motion.div>
+
   );
 };
 

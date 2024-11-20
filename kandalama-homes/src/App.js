@@ -7,6 +7,8 @@ import Home_2 from "./components/Home_2";
 import Home_3 from "./components/Home_3";
 import Home_4 from "./components/Home_4";
 import Home_5 from "./components/Home_5";
+import Home_6 from "./components/Home_6";
+import Footer from "./components/Footer";
 
 
 
@@ -21,6 +23,8 @@ function App() {
         <Route path="/home_3" element={<Home_3 />} />
         <Route path="/home_4" element={<Home_4 />} />
         <Route path="/home_5" element={<Home_5 />} />
+        <Route path="/home_6" element={<Home_6 />} />
+        <Route path="/footer" element={<Footer />} />
 
         
 

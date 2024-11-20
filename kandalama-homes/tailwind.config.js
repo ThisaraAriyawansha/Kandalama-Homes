@@ -13,6 +13,8 @@ module.exports = {
         sansita: ['"Sansita One"', 'cursive'],
         poppins: ['Poppins', 'sans-serif'], 
         prata: ['Prata', 'serif'],
+        quando: ['Quando', 'serif'],
+
 
       },
       fontSize: {
