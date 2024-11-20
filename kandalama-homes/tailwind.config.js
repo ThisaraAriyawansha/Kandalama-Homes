@@ -9,7 +9,11 @@ module.exports = {
         milonga: ['Milonga', 'sans-serif'],
         megrim: ['Megrim', 'sans-serif'],
         prata: ['Prata', 'serif'],
-        poppins: ['Poppins', 'sans-serif'], // Added Poppins font
+        quando: ['Quando', 'serif'], // Define the Quando font family
+        sansita: ['"Sansita One"', 'cursive'],
+        poppins: ['Poppins', 'sans-serif'], 
+        prata: ['Prata', 'serif'],
+
       },
       fontSize: {
         '96px': '96px',

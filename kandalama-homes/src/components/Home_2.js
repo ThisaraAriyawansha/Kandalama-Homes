@@ -29,9 +29,11 @@ const AboutUs = () => {
         transition={{ duration: 1.2 }} // Increased duration to make the animation slower (1.2s)
         viewport={{ once: true }} // Trigger animation once when the element is in view
       >
-        <h2 className="mb-4 text-[32px] sm:text-[48px] font-prata font-[400] leading-[56px] text-customGreen">
-          About Us
-        </h2>
+<h2 className="mb-4 text-[48px] sm:text-[72px] font-prata font-[400] leading-[56px] text-customGreen">
+  About Us
+</h2>
+
+
         <p className="text-[14px] sm:text-[16px] font-poppins font-[300] leading-[40px] text-black">
           A construction site is a bustling environment where buildings, roads, or other
           infrastructure projects come to life. It is filled with the sights and sounds of
