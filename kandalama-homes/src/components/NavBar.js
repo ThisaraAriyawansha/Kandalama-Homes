@@ -23,7 +23,7 @@ const Navbar = () => {
         <ul className="flex justify-between w-full space-x-6 text-lg font-medium">
           <li>
             <a
-              href="#home"
+              href="/"
               className="hover:text-gray-700"
               style={{ color: "#000000" }} // Set link color to #000000 (black)
             >
@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#about"
+              href="/about"
               className="hover:text-gray-700"
               style={{ color: "#000000" }} // Set link color to #000000 (black)
             >
