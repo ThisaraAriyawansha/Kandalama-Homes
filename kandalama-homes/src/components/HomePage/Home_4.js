@@ -1,4 +1,8 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
+
 
 const Services = () => {
   const services = [
@@ -15,6 +19,14 @@ const Services = () => {
       image: "https://s3-alpha-sig.figma.com/img/5725/e9b4/326d2352d6b3186f7bee1869e69dfe20?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y5OK0Yf9ZrSJWpjzMS~Mk5TqqOq8-SEygUxbUxUglchHNWDBqhGR5T1zWJSPgFado5vkDfKf2fcwQrCbthf8iu4YrT2jUWdGeJYgo9aoByYC2bT80pxDCa5F1e~RcUSUwAJBX-f8Caqb-A6G~9HX6bIcQGh-dfmhFxwISugdmQLxdLSlUsxdZP3lDi4xFvkgblhBrIXDXvJYe1XO5NSy-m73LO~-hQOVwjaDRU-rdyaKxcngVgbX2pv4Jk4eHzvdj8rVP3oQK1NslovumFbvTsWujVRNuG7KsWhTsjzwLs7UMdUsMZSgGWyk0KbuuSITYE4xQ~yo5sJMhVBa0RlUtA__",
     },
   ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
     <div className="min-h-screen overflow-hidden bg-white text-white border-4 border-white rounded-[47px]">
@@ -34,23 +46,43 @@ const Services = () => {
             backgroundColor: "rgba(0, 90, 78, 0.49)", // Equivalent to #005A4E7D
           }}
         >
-          <h2 className="mb-12 text-4xl font-bold text-center mt-20 font-quando leading-[44px] ml-32 text-white">
+          <h2 className="mb-12 text-4xl font-bold text-center mt-20 font-quando leading-[44px] ml-28 text-white">
             OUR SERVICES
           </h2>
-          <div className="grid grid-cols-1 gap-8 mx-auto sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 max-w-7xl">
+
+          {/* Mobile Carousel (only visible on mobile) */}
+          <div className="flex items-center justify-center w-full md:hidden">
+  <Slider {...settings} className="w-full max-w-[300px]">
+    {services.map((service, index) => (
+      <div key={index} className="relative overflow-hidden shadow-lg rounded-xl border-4 border-white h-[350px] mx-auto">
+        <img
+          src={service.image}
+          alt={service.title}
+          className="object-cover w-full h-full"
+        />
+        <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black bg-opacity-0 group-hover:bg-opacity-50">
+          <div className="px-4 py-2 bg-black bg-opacity-50 rounded-md">
+            <h3 className="text-[20px] sm:text-[25px] md:text-[30px] leading-[50px] font-[400] text-center text-white font-sansita">
+              {service.title}
+            </h3>
+          </div>
+        </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
+
+
+          {/* Grid for Desktop */}
+          <div className="hidden grid-cols-1 gap-8 mx-auto md:grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 max-w-7xl">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden shadow-lg rounded-xl border-4 border-white h-[500px] max-w-[300px] mx-auto group hover:scale-105 transform transition-all duration-300 ease-in-out"
-              >
-                {/* Service Image */}
+              <div key={index} className="relative overflow-hidden shadow-lg rounded-xl border-4 border-white h-[500px]">
                 <img
                   src={service.image}
                   alt={service.title}
                   className="object-cover w-full h-full"
                 />
-
-                {/* Text Overlay with Blur */}
                 <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black bg-opacity-0 group-hover:bg-opacity-50">
                   <div className="px-4 py-2 bg-black bg-opacity-50 rounded-md">
                     <h3 className="text-[20px] sm:text-[25px] md:text-[30px] leading-[50px] font-[400] text-center text-white font-sansita">
