@@ -12,6 +12,7 @@
   /* Mobile Version - Responsive Styles */
   @media screen and (max-width: 768px) {
     .min-h-screen {
+      border:hidden;
       padding: 0;
       height: auto; /* Allow container height to adjust based on content */
       overflow: hidden;  /* Ensure content doesn't overflow from rounded corners */
