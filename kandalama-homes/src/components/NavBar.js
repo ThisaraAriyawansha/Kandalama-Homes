@@ -89,7 +89,7 @@ const Navbar = () => {
     isSidebarOpen ? "translate-x-0" : "-translate-x-full"
   } transition-transform duration-300 ease-in-out md:hidden rounded-r-lg`}
   style={{
-    width: "17vh", // Adjust the width for responsiveness
+    width: "20vh", // Adjust the width for responsiveness
     height: "auto", // Adjust height to fit content
     maxHeight: "60vh", // Restrict max height
     overflowY: "auto", // Enable scrolling if content exceeds
