@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./NavBar";
+import Navbar from "../NavBar";
 import Home_1 from "./Home_1";
 import Home_2 from "./Home_2";
 import Home_3 from "./Home_3";
 import Home_4 from "./Home_4";
 import Home_5 from "./Home_5";
 import Home_6 from "./Home_6";
-import Footer from "./Footer";
+import Footer from "../Footer";
 
 
 
