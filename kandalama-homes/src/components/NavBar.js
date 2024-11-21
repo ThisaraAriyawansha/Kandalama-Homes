@@ -32,7 +32,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#services"
+              href="/services"
               className="hover:text-gray-700"
               style={{ color: "#000000" }} // Set link color to #000000 (black)
             >
@@ -41,7 +41,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#projects"
+              href="/projects"
               className="hover:text-gray-700"
               style={{ color: "#000000" }} // Set link color to #000000 (black)
             >
@@ -59,7 +59,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#contact"
+              href="/contact"
               className="hover:text-gray-700"
               style={{ color: "#000000" }} // Set link color to #000000 (black)
             >
