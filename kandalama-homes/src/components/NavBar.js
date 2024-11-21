@@ -1,31 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaArrowRight, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <div className="text-white bg-white">
+    <div>
+      {/* Full Navbar for PC (unchanged) */}
       <nav
-        className="flex items-center justify-between px-16 py-4 text-black bg-white shadow-md"
+        className="fixed top-0 z-50 items-center justify-between hidden w-full px-16 py-4 text-black bg-white shadow-md md:flex"
         style={{
-          width: "650px", // Set the width to 100% to span the full screen
-          height: "70px", // Set the height to 100px
-          top: "0", // Position the navbar at the top of the screen
-          right:"0",
-          position: "fixed", // Fix the navbar at the top of the page
-          borderBottomLeftRadius: "345px", // Apply the bottom-left border radius
-          zIndex: "1000", // Ensure navbar stays above other content
-          fontFamily: "'Poppins', sans-serif", // Apply the Poppins font
-          fontWeight: "300", // Set font weight to 300
-          fontSize: "24px", // Set font size to 24px
-          lineHeight: "36px", // Set line height to 36px
+          width: "650px",
+          height: "70px",
+          right: "0",
+          borderBottomLeftRadius: "345px",
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: "300",
+          fontSize: "24px",
+          lineHeight: "36px",
         }}
-      >
-        {/* Navbar items */}
+      >      
         <ul className="flex justify-between w-full space-x-6 text-lg font-medium">
           <li>
             <a
               href="/"
               className="hover:text-gray-700"
-              style={{ color: "#000000" }} // Set link color to #000000 (black)
+              style={{ color: "#000000" }}
             >
               Home
             </a>
@@ -34,7 +38,7 @@ const Navbar = () => {
             <a
               href="/services"
               className="hover:text-gray-700"
-              style={{ color: "#000000" }} // Set link color to #000000 (black)
+              style={{ color: "#000000" }}
             >
               Services
             </a>
@@ -43,7 +47,7 @@ const Navbar = () => {
             <a
               href="/projects"
               className="hover:text-gray-700"
-              style={{ color: "#000000" }} // Set link color to #000000 (black)
+              style={{ color: "#000000" }}
             >
               Projects
             </a>
@@ -52,7 +56,7 @@ const Navbar = () => {
             <a
               href="/about"
               className="hover:text-gray-700"
-              style={{ color: "#000000" }} // Set link color to #000000 (black)
+              style={{ color: "#000000" }}
             >
               About Us
             </a>
@@ -61,13 +65,91 @@ const Navbar = () => {
             <a
               href="/contact"
               className="hover:text-gray-700"
-              style={{ color: "#000000" }} // Set link color to #000000 (black)
+              style={{ color: "#000000" }}
             >
               Contact Us
             </a>
           </li>
         </ul>
       </nav>
+
+      {/* Arrow Button for Mobile */}
+      <div
+        className={`md:hidden fixed top-1/4 left-2 transform -translate-y-1/2 p-2 bg-white text-black rounded-full cursor-pointer z-50 ${
+          isSidebarOpen ? "hidden" : "block"
+        }`}
+        onClick={toggleSidebar}
+      >
+        <FaArrowRight size={20} />
+      </div>
+
+      {/* Sidebar for Mobile */}
+      <div
+  className={`fixed top-[15%]  left-0 w-64 bg-white shadow-lg p-4 z-50 transform ${
+    isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+  } transition-transform duration-300 ease-in-out md:hidden rounded-r-lg`}
+  style={{
+    height: "auto", // Adjust height to fit content
+    maxHeight: "60vh", // Restrict max height
+    maxWidth:"17vh",
+    overflowY: "auto", // Enable scrolling if content exceeds
+    borderTopRightRadius: "60px", // Rounded top-right corner
+    borderBottomRightRadius: "60px", // Rounded bottom-right corner
+  }}
+>
+  {/* Close Button */}
+  <button
+    className="absolute text-black top-4 right-4"
+    onClick={toggleSidebar}
+  >
+    <FaTimes size={24} />
+  </button>
+
+  {/* Sidebar Links */}
+  <ul className="flex flex-col items-start mt-4 space-y-4 text-lg font-medium">
+    <li>
+      <a
+        href="/"
+        className="px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-200 hover:rounded-md"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/services"
+        className="px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-200 hover:rounded-md"
+      >
+        Services
+      </a>
+    </li>
+    <li>
+      <a
+        href="/projects"
+        className="px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-200 hover:rounded-md"
+      >
+        Projects
+      </a>
+    </li>
+    <li>
+      <a
+        href="/about"
+        className="px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-200 hover:rounded-md"
+      >
+        About Us
+      </a>
+    </li>
+    <li>
+      <a
+        href="/contact"
+        className="px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-200 hover:rounded-md"
+      >
+        Contact Us
+      </a>
+    </li>
+  </ul>
+</div>
+
     </div>
   );
 };
