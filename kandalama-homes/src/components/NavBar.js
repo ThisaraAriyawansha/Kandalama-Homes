@@ -85,13 +85,13 @@ const Navbar = () => {
 
       {/* Sidebar for Mobile */}
       <div
-  className={`fixed top-[15%]  left-0 w-64 bg-white shadow-lg p-4 z-50 transform ${
+  className={`fixed top-[15%] left-0 bg-white shadow-lg p-4 z-50 transform ${
     isSidebarOpen ? "translate-x-0" : "-translate-x-full"
   } transition-transform duration-300 ease-in-out md:hidden rounded-r-lg`}
   style={{
+    width: "17vh", // Adjust the width for responsiveness
     height: "auto", // Adjust height to fit content
     maxHeight: "60vh", // Restrict max height
-    maxWidth:"17vh",
     overflowY: "auto", // Enable scrolling if content exceeds
     borderTopRightRadius: "60px", // Rounded top-right corner
     borderBottomRightRadius: "60px", // Rounded bottom-right corner
