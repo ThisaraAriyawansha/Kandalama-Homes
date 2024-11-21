@@ -25,14 +25,16 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
+
     <div
-      className="py-10 bg-center bg-cover "
+      className="bg-center bg-cover "
       style={{
         backgroundImage:
           "url('https://s3-alpha-sig.figma.com/img/b878/8d51/27baf7eb2492fefb2c03959148442358?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cfcy8kpz4vvkERBYbNgT6eeeFZar0SNy1cGHFVLh1aRcXaIrstnP3fAxIVOqITyPAsC5qtK7DV0Kinra3N6xvElonJoA7VnsN5xkz79LxHaD1G~Ah~9SnZI6-YwunA7LB0MgwLDinj8K1DTZ8SkU1ucftUUiWv2BRV459FyjYXITOSHAd73gmtTgw2mYif8ZCfj7blHeCCqceOFpo2NDkUDOid7M~S~HX6xs89pAXmNG81bqJ2XDdwb09hdzocaJCGeW79YeuLa~NOprEcpPlXMtFNFYkxxJHk97sgHqVtX-ckqs123peavx7a~d35K3FU-9oML-8NKqZWznifcTcA__')", // Replace with your image URL
       }}
     >
-      <div className="w-full h-full min-h-screen rounded-[47px]" style={{ background: "#000000B8" }}>
+            <div className="w-full min-h-screen " style={{ background: "#000000B8" }}>
+
         <div className="container p-20 mx-auto text-center text-white">
           <h2 className="mb-4 text-4xl text-left font-prata">Meet Our Team</h2>
           <p className="mb-8 text-lg text-left font-poppins">
