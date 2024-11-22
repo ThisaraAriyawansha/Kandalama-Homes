@@ -42,7 +42,8 @@ const OurProjects = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <h2 className="mb-8 text-4xl font-bold text-center text-gray-800 font-quando">OUR PROJECTS</h2>
         <p className="mb-12 text-center text-black font-poppins">
-        A construction site is a bustling environment where buildings, roads, or other infrastructure projects come to life. It is filled with the sights and sounds of progress, including heavy machinery like cranes, excavators, and bulldozers, alongside teams of workers in safety gear collaborating to meet project goals. Safety is a top priority, with protocols in place to ensure the well-being of everyone involved. Materials such as steel, concrete, and lumber are strategically moved and assembled as blueprints transform into reality. The dynamic atmosphere reflects both the complexity and precision required to bring architectural visions to completion.        </p>
+          A construction site is a bustling environment where buildings, roads, or other infrastructure projects come to life. It is filled with the sights and sounds of progress, including heavy machinery like cranes, excavators, and bulldozers, alongside teams of workers in safety gear collaborating to meet project goals. Safety is a top priority, with protocols in place to ensure the well-being of everyone involved. Materials such as steel, concrete, and lumber are strategically moved and assembled as blueprints transform into reality. The dynamic atmosphere reflects both the complexity and precision required to bring architectural visions to completion.
+        </p>
 
         {/* Projects Grid for Desktop */}
         <div className="hidden grid-cols-1 gap-8 md:grid md:grid-cols-3">
@@ -64,44 +65,45 @@ const OurProjects = () => {
   );
 };
 
-// Project Card Component
 const ProjectCard = ({ project, index, isMobile }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
 
+  // Mobile and desktop card styling
   const cardClasses = isMobile
-  ? 'overflow-hidden transition-shadow duration-300 rounded-lg shadow-md bg-customGreen hover:shadow-lg hover:scale-105 transform-gpu max-w-xs mx-auto h-1/2 ' // Reduced height for mobile
-  : 'overflow-hidden transition-shadow duration-300 rounded-lg shadow-md bg-customGreen hover:shadow-lg hover:scale-105 transform-gpu h-96'; // Reduced height for desktop
+  ? 'overflow-hidden transition-shadow duration-300 rounded-lg shadow-md bg-customGreen hover:shadow-lg hover:scale-105 transform-gpu max-w-xs mx-auto h-auto py-2 flex flex-col items-center' // Updated for mobile
+  : 'overflow-hidden transition-shadow duration-300 rounded-lg shadow-md bg-customGreen hover:shadow-lg hover:scale-105 transform-gpu hover:bg-customGreen/90 h-96 flex flex-col items-center transition-all';
 
-const imageClasses = isMobile
-? 'object-cover w-full h-3/4 transition-transform duration-300 group-hover:scale-110' // Reduced height for mobile
-: 'object-cover w-full h-60 transition-transform duration-300 group-hover:scale-110'; // Reduced height for desktop
+  const imageClasses = isMobile
+  ? 'object-contain w-full max-h-60 transition-transform duration-300 group-hover:scale-105 ' // Adjusted for mobile
+  : 'object-cover w-full h-60 transition-transform duration-300 group-hover:scale-105';
 
-
+  const textClasses = 'text-center text-white font-poppins p-4 flex-grow'; // Ensure content pushes down below image
 
   return (
     <motion.div
       ref={ref}
       className={cardClasses}
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
-      transition={{ delay: index * 0.2, duration: 1 }}
+      initial={{ opacity: 0, y: 30 }} // Initial state (invisible and slightly moved down)
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }} // Animate on scroll
+      transition={{ delay: index * 0.2, duration: 1 }} // Delay and duration for smooth landing
     >
-      <div className="relative group">
+      <div className="w-full">
+        {/* Image positioned at the top */}
         <img
           src={project.image}
           alt={project.title}
           className={imageClasses}
         />
-        <div className="absolute left-0 w-1/4 p-2 transform -translate-y-1/2 bg-white rounded-r-md top-3/4">
-          <h3 className="text-lg font-semibold text-customGreen font-prata">{project.title}</h3>
+        <div className="left-0 w-2/5 p-2 transform -translate-y-1/2 bg-white rounded-r-md">
+          <h3 className="text-2xl text-customGreen font-prata">{project.title}</h3>
         </div>
       </div>
-
-      <div className="p-6">
-        <p className="text-center text-white font-poppins">{project.description}</p>
+      {/* Project Details */}
+      <div className={textClasses}>
+        <p>{project.description}</p>
       </div>
     </motion.div>
   );

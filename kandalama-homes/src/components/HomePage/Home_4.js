@@ -84,26 +84,31 @@ const Services = () => {
 
 
 
+{/* Grid for Desktop */}
+<div className="hidden max-w-6xl gap-8 mx-auto md:grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3">
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="relative overflow-hidden shadow-lg rounded-xl border-4 border-white h-[500px] transition-transform duration-300 group"
+    >
+      <img
+        src={service.image}
+        alt={service.title}
+        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black bg-opacity-0 group-hover:bg-opacity-50">
+        <div className="px-4 py-2 bg-black bg-opacity-50 rounded-md">
+          <h3 className="text-[20px] sm:text-[25px] md:text-[30px] leading-[50px] font-[400] text-center text-white font-sansita">
+            {service.title}
+          </h3>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
 
-          {/* Grid for Desktop */}
-          <div className="hidden grid-cols-1 gap-8 mx-auto md:grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 max-w-7xl">
-            {services.map((service, index) => (
-              <div key={index} className="relative overflow-hidden shadow-lg rounded-xl border-4 border-white h-[500px]">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="object-cover w-full h-full"
-                />
-                <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black bg-opacity-0 group-hover:bg-opacity-50">
-                  <div className="px-4 py-2 bg-black bg-opacity-50 rounded-md">
-                    <h3 className="text-[20px] sm:text-[25px] md:text-[30px] leading-[50px] font-[400] text-center text-white font-sansita">
-                      {service.title}
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+
+          
         </div>
       </section>
     </div>
