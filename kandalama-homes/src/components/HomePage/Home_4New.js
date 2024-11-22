@@ -47,7 +47,7 @@ const TeamSection = () => {
     {services.map((service, index) => (
       <div
         key={index}
-        className="flex flex-col items-center justify-center p-6 transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[80vh]"
+        className="flex flex-col items-center w-[400px] justify-center p-6 transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[80vh]"
       >
         <div className="flex justify-center mb-6 h-[450px]">
           <img
