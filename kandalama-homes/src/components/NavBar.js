@@ -91,7 +91,7 @@ const Navbar = () => {
   style={{
     width: "20vh", // Adjust the width for responsiveness
     height: "auto", // Adjust height to fit content
-    maxHeight: "60vh", // Restrict max height
+    maxHeight: "70vh", // Restrict max height
     overflowY: "auto", // Enable scrolling if content exceeds
     borderTopRightRadius: "60px", // Rounded top-right corner
     borderBottomRightRadius: "60px", // Rounded bottom-right corner
@@ -99,11 +99,11 @@ const Navbar = () => {
 >
   {/* Close Button */}
   <button
-    className="absolute text-black top-4 right-4"
-    onClick={toggleSidebar}
-  >
-    <FaTimes size={24} />
-  </button>
+  className="absolute text-red-500 right-10 top-4"
+  onClick={toggleSidebar}
+>
+  <FaTimes size={24} />
+</button>
 
   {/* Sidebar Links */}
   <ul className="flex flex-col items-start mt-4 space-y-4 text-lg font-medium">
@@ -144,7 +144,7 @@ const Navbar = () => {
         href="/contact"
         className="px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-200 hover:rounded-md"
       >
-        Contact Us
+        Contact
       </a>
     </li>
   </ul>

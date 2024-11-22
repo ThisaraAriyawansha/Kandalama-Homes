@@ -38,6 +38,7 @@
   
     /* Background Image */
     img {
+      border-radius: 15px;
       object-fit: cover;   /* Ensure the image covers the entire area */
       width: 100%;          /* Fill the container width */
       height: 100%;         /* Fill the container height */
@@ -72,6 +73,8 @@
   
     /* Adjust Image and Containers for Mobile */
     .bg-gradient-to-r {
+      border-radius: 15px;
+
       background: rgba(0, 0, 0, 0.7);
       background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(84, 44, 1, 0.4));
     }
