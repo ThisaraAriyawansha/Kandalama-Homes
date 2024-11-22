@@ -7,6 +7,7 @@ import Home_4 from "./Home_4";
 import Home_5 from "./Home_5";
 import Home_6 from "./Home_6";
 import Home_7 from "./Home_7";
+import Home_8 from "./Home_4New";
 import Footer from "../Footer";
 
 
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Home_2/>
       <Home_3/>
       <Home_4/>
+      <Home_8/>
       <Home_5/>
       <Home_7/>
       <Home_6/>
