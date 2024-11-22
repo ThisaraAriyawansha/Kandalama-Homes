@@ -53,7 +53,7 @@ const TeamSection = () => {
           <img
             src={service.image}
             alt={service.title}
-            className="object-cover w-80 sm:w-80 h-[650px] border-4 border-white rounded-[17px]"
+            className="object-cover  w-[350px] h-[650px] border-4 border-white rounded-[17px]"
           />
         </div>
         
@@ -83,11 +83,11 @@ const TeamSection = () => {
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="border-4 border-white">
+      <div className="border-4 border-white rounded-[17px]">
         <img
           src={service.image}
           alt={service.title}
-          className="object-cover w-full h-full rounded-none"
+          className="object-cover w-full h-full rounded-[17px]"
         />
       </div>
       <div className="absolute px-4 py-2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 rounded-md top-1/2 left-1/2 backdrop-blur-md"> {/* Title centered */}
