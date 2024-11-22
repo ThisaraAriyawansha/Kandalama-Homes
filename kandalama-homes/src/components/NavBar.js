@@ -89,7 +89,7 @@ const Navbar = () => {
     isSidebarOpen ? "translate-x-0" : "-translate-x-full"
   } transition-transform duration-300 ease-in-out md:hidden rounded-r-lg`}
   style={{
-    width: "20vh", // Adjust the width for responsiveness
+    width: "55vw", // Set width for mobile devices (75% of the viewport)
     height: "auto", // Adjust height to fit content
     maxHeight: "70vh", // Restrict max height
     overflowY: "auto", // Enable scrolling if content exceeds
@@ -99,14 +99,14 @@ const Navbar = () => {
 >
   {/* Close Button */}
   <button
-  className="absolute text-red-500 right-10 top-4"
-  onClick={toggleSidebar}
->
-  <FaTimes size={24} />
-</button>
+    className="absolute text-red-500 right-4 top-4"
+    onClick={toggleSidebar}
+  >
+    <FaTimes size={24} />
+  </button>
 
   {/* Sidebar Links */}
-  <ul className="flex flex-col items-start mt-4 space-y-4 text-lg font-medium">
+  <ul className="flex flex-col items-start mt-8 space-y-4 text-lg font-medium">
     <li>
       <a
         href="/"
@@ -149,6 +149,10 @@ const Navbar = () => {
     </li>
   </ul>
 </div>
+
+
+
+
 
     </div>
   );
