@@ -43,7 +43,8 @@ const OurHistory = () => {
 
 
           {/* Right - Image Grid */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="hidden md:block">
+          <div className="grid grid-cols-3 gap-6 ">
             {/* Top Left Image (Larger, based on Golden Ratio) */}
             <motion.img
               src="https://s3-alpha-sig.figma.com/img/5725/e9b4/326d2352d6b3186f7bee1869e69dfe20?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y5OK0Yf9ZrSJWpjzMS~Mk5TqqOq8-SEygUxbUxUglchHNWDBqhGR5T1zWJSPgFado5vkDfKf2fcwQrCbthf8iu4YrT2jUWdGeJYgo9aoByYC2bT80pxDCa5F1e~RcUSUwAJBX-f8Caqb-A6G~9HX6bIcQGh-dfmhFxwISugdmQLxdLSlUsxdZP3lDi4xFvkgblhBrIXDXvJYe1XO5NSy-m73LO~-hQOVwjaDRU-rdyaKxcngVgbX2pv4Jk4eHzvdj8rVP3oQK1NslovumFbvTsWujVRNuG7KsWhTsjzwLs7UMdUsMZSgGWyk0KbuuSITYE4xQ~yo5sJMhVBa0RlUtA__"
@@ -103,6 +104,7 @@ const OurHistory = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1 }}
             />
+          </div>
           </div>
         </div>
       </div>
