@@ -32,6 +32,7 @@ const settings = {
   autoplaySpeed: 3000,
   centerMode: false, // Disable centerMode to avoid showing partial cards on the sides
   focusOnSelect: true,
+  arrows: false, // Disable arrows
   responsive: [
     {
       breakpoint: 768, // Mobile view settings
@@ -42,6 +43,7 @@ const settings = {
     },
   ],
 };
+
 
 const OurProjects = () => {
   return (
