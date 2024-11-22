@@ -90,7 +90,7 @@ const TeamSection = () => {
           className="object-cover w-full h-full rounded-[17px]"
         />
       </div>
-      <div className="absolute px-4 py-2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 rounded-md top-1/2 left-1/2 backdrop-blur-md"> {/* Title centered */}
+      <div className="absolute w-3/4 px-4 py-2 transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-md bg-opacity-5 top-1/2 left-1/2 backdrop-blur-md"> {/* Title centered */}
         <h3 className="text-xl text-white sm:text-2xl font-sansita">{service.title}</h3>
       </div>
     </motion.div>
