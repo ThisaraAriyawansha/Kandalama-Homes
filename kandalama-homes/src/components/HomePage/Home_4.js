@@ -53,7 +53,7 @@ const Services = () => {
 
 {/* Mobile Carousel (only visible on mobile) */}
 <div
-  className="flex flex-col items-center justify-center w-full py-12 bg-center bg-cover md:hidden"
+  className="flex flex-col items-center justify-center w-full py-12 bg-center bg-cover md:hidden "
   style={{
     backgroundImage: 'url(https://s3-alpha-sig.figma.com/img/60da/b4a3/15a09469f8e42864c8d808b51b0a03c2?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YLliejqxW5ELKNwBDJ8k1UIVO4O-L1F6wJvz5I2iiJxllT-vfJ4mFEHT3UbGSa88f-OUcpLeIqoAYVJ1jdMuVPqmckSr0VyjZIoMlohceA5y9h~FhwwzpRZrr-3TgDmM7TUxWpXFgc-P~h4O3X3y5DQ-PzhgIKPZn83iBE3yR~axEl~UpcLNijxM0E8vpsYb-H9kYZsC1k02ZZch8u1Z7ieDAob01rZ9Ozyc4F~LS7WIGZ8wd9Hj-caNVIzX~65wuj99Iqqut1xk~lQVo-5bOngUg~kgOK9L1Cjd32ggEPEBBZgxk1lZNn-29UZ9eAnaosIkz8T5hAFsLtas5j0rXw__)',
     backgroundColor: '#005A4E7D', // Add background color
@@ -62,24 +62,25 @@ const Services = () => {
 >
   <h2 className="mb-8 text-2xl font-bold text-center text-white font-quando">OUR SERVICES</h2>
   
-  <Slider {...settings} className="w-full max-w-[300px]">
-    {services.map((service, index) => (
-      <div key={index} className="relative overflow-hidden shadow-lg rounded-xl border-4 border-white h-[350px] mx-auto">
-        <img
-          src={service.image}
-          alt={service.title}
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black bg-opacity-0 group-hover:bg-opacity-50">
-          <div className="px-4 py-2 bg-black bg-opacity-50 rounded-md">
-            <h3 className="text-[20px] sm:text-[25px] md:text-[30px] leading-[50px] font-[400] text-center text-white font-sansita">
-              {service.title}
-            </h3>
-          </div>
+  <Slider {...settings} className="w-full max-w-[300px] ">
+  {services.map((service, index) => (
+    <div key={index} className="relative overflow-hidden shadow-lg rounded-xl border-4 border-white max-h-[750px] mx-auto ">  {/* Reduced height here */}
+      <img
+        src={service.image}
+        alt={service.title}
+        className="object-cover w-full h-full max-h-[750px]"
+      />
+      <div className="max-h-[700px] absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black bg-opacity-0  group-hover:bg-opacity-50">
+        <div className="px-4 py-2 bg-black bg-opacity-50 rounded-md">
+          <h3 className="text-[16px] sm:text-[20px] md:text-[25px] leading-[40px] font-[400] text-center text-white font-sansita max-h-[300px]">  {/* Adjusted font size */}
+            {service.title}
+          </h3>
         </div>
       </div>
-    ))}
-  </Slider>
+    </div>
+  ))}
+</Slider>
+
 </div>
 
 
