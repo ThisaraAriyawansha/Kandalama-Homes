@@ -1,10 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Project_1 = () => {
   return (
-    <div className="flex w-full h-40 bg-customGreen rounded-b-[40px]">
-      <h2 className="p-16 text-3xl text-left text-white font-prata">Our Projects</h2>
-    </div>
+    <motion.div
+      className="w-full h-40 bg-customGreen rounded-b-[40px]"
+      initial={{ opacity: 0, y: -50 }} // Initial state: invisible and slightly above
+      whileInView={{ opacity: 1, y: 0 }} // On view: fully visible and at normal position
+      transition={{ duration: 0.8 }} // Transition duration for the animation
+    >
+      <h2 className="p-16 text-3xl text-center text-white sm:text-left sm:text-3xl font-prata">
+      Our Projects
+      </h2>
+    </motion.div>
   );
 };
 
