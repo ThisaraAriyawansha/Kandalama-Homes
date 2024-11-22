@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="w-3/4 mx-auto border-t-2 border-white" />
+      <hr className="w-3/4 mx-auto mt-10 border-t-2 border-white" />
 
       <div className="pt-4 mt-8 text-sm text-center border-teal-700">
         <p>
