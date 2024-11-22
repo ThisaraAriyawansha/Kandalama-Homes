@@ -59,7 +59,7 @@ const TeamSection = () => {
         
         {/* Title with small blurred background */}
         <h3 className="relative mt-4 text-lg text-center text-white sm:mt-6 sm:text-xl font-sansita">
-          <span className="absolute inset-0 h-10 p-2 bg-black bg-opacity-50 rounded-lg backdrop-blur-sm">
+          <span className="absolute inset-0 h-20 p-5 bg-black bg-opacity-50 rounded-lg backdrop-blur-sm">
             {service.title}
           </span>
         </h3>
