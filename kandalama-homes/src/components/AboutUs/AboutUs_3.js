@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick"; // Import the Slider component
+import { motion } from "framer-motion";
 
 const teamMembers = [
   {
@@ -80,21 +81,27 @@ const TeamSection = () => {
 
           {/* Desktop view: Show grid */}
           <div className="hidden grid-cols-1 gap-8 ml-20 mr-20 md:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {teamMembers.map((member, index) => (
-    <div
-      key={index}
-      className="p-6 transition-shadow duration-300 bg-white shadow-md hover:shadow-xl"
-    >
-      <img
-        src={member.image}
-        alt={member.role}
-        className="object-cover w-full h-auto rounded-none" // Removed rounded class
-      />
-      <h3 className="mt-4 text-xl text-black font-prata">{member.name}</h3>
-      <p className=" font-prata text-customGreen">{member.role}</p>
+      {teamMembers.map((member, index) => (
+        <motion.div
+          key={index}
+          className="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-xl"
+          whileHover={{ scale: 1.05 }} // Scale on hover
+          whileInView={{ opacity: 1, y: 0 }} // Fade in on view
+          initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and position slightly lower
+          transition={{ duration: 0.8 }} // Slower transition (increase duration to slow down)
+        >
+          <img
+            src={member.image}
+            alt={member.role}
+            className="object-cover w-full h-auto rounded-none"
+          />
+          <h3 className="mt-4 text-xl text-black font-prata">{member.name}</h3>
+          <p className="text-customGreen font-prata">{member.role}</p>
+        </motion.div>
+      ))}
     </div>
-  ))}
-          </div>
+
+          
         </div>
       </div>
     </div>
