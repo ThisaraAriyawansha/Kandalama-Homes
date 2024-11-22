@@ -44,23 +44,20 @@ const AboutUs = () => {
 
             {/* Right Section - Text with Animation */}
             <motion.div
-              className="w-2/3 text-black absolute top-[350px] left-[730px] right-10 bottom-10 about-text"
+              className="w-2/3 text-black absolute top-[350px] left-[700px] right-10 bottom-10 about-text"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
             >
               <p className="text-lg leading-8 text-white font-poppins">
-                A construction site is a bustling environment where buildings,
-                roads, or other<br/> infrastructure projects come to life. It's
-                filled with the sights and sounds of<br/> progress, including heavy
-                machinery like cranes, excavators, and bulldozers,<br/> alongside
-                teams of workers in safety gear collaborating to meet project
-                goals.<br/> Safety is a top priority, with protocols in place to
-                ensure the well-being of everyone <br/>involved. Materials such as
-                steel, concrete, and lumber are strategically moved <br/>and
-                assembled as blueprints transform into reality. The dynamic
-                atmosphere<br/> reflects both the complexity and precision required
-                to bring architectural visions to <br/>completion.
+              Welcome to Kandalama Homes, your trusted partner in building dreams and <br/>
+              creating exceptional living spaces in Sri Lanka. With a passion for excellence and a <br/>
+              commitment to quality, we specialize in landscape architecture and construction that<br/>
+               blends innovation with timeless design. At Kandalama Homes, we take pride in<br/>
+                transforming visions into reality, delivering tailor-made solutions that reflect your<br/>
+                 unique style and needs. Our expert team ensures every project is crafted with precision,<br/>
+                  sustainability, and a dedication to enhancing the natural beauty of our island home. <br/>
+                  Discover the art of construction with Kandalama Homes – where your dream home <br/>begins.
               </p>
             </motion.div>
           </div>

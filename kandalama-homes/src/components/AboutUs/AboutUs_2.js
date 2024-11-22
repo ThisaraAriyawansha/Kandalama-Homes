@@ -28,17 +28,9 @@ const OurHistory = () => {
                 WHO WE ARE
             </h3>
             <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-center sm:text-left sm:text-base leading-normal">
-                We are a team of dedicated professionals committed to delivering
-                high-quality construction and design services. Our mission is to
-                provide innovative and reliable solutions that exceed our clients'
-                expectations.
+            Kandalama Homes was founded with a vision to redefine construction and landscape architecture in Sri Lanka. From humble beginnings, we have grown into a trusted name, known for delivering exceptional projects that blend creativity, functionality, and sustainability. With years of experience and a passion for excellence, our journey has been marked by countless success stories and lasting relationships with our clients. At Kandalama Homes, our history is built on a foundation of trust, innovation, and a commitment to creating spaces that stand the test of time
             </p>
-            <br />
-            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-center sm:text-left sm:text-base leading-normal">
-                With years of experience in the industry, we take pride in our
-                craftsmanship and attention to detail, ensuring that every project
-                we undertake is completed to the highest standards.
-            </p>
+
             </motion.div>
 
 
