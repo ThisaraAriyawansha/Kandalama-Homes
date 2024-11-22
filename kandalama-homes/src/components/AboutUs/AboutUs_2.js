@@ -7,13 +7,14 @@ const OurHistory = () => {
       <div className="max-w-6xl mx-auto">
         {/* Title Section */}
         <motion.h2
-          className="mb-8 text-6xl text-center text-green-800 font-prata"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Our History
-        </motion.h2>
+  className="mb-8 text-4xl text-center text-green-800 sm:text-5xl md:text-6xl font-prata"
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  Our History
+</motion.h2>
+
 
         {/* Content Section */}
         <div className="grid gap-8 md:grid-cols-2">
@@ -22,20 +23,24 @@ const OurHistory = () => {
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-          >
-            <h3 className="mb-4 text-xl font-prata ">WHO WE ARE</h3>
-            <p className="mb-4 text-black font-poppins leading-[2.5]">
-              We are a team of dedicated professionals committed to delivering
-              high-quality construction and design services. Our mission is to
-              provide innovative and reliable solutions that exceed our clients'
-              expectations.
-            </p><br/>
-            <p className="mb-4 text-black font-poppins leading-[2.5]">
-              With years of experience in the industry, we take pride in our
-              craftsmanship and attention to detail, ensuring that every project
-              we undertake is completed to the highest standards.
+            >
+            <h3 className="mb-4 text-xl text-center font-prata sm:text-left sm:text-2xl">
+                WHO WE ARE
+            </h3>
+            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-center sm:text-left sm:text-base leading-normal">
+                We are a team of dedicated professionals committed to delivering
+                high-quality construction and design services. Our mission is to
+                provide innovative and reliable solutions that exceed our clients'
+                expectations.
             </p>
-          </motion.div>
+            <br />
+            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-center sm:text-left sm:text-base leading-normal">
+                With years of experience in the industry, we take pride in our
+                craftsmanship and attention to detail, ensuring that every project
+                we undertake is completed to the highest standards.
+            </p>
+            </motion.div>
+
 
           {/* Right - Image Grid */}
           <div className="grid grid-cols-3 gap-6">
