@@ -42,7 +42,7 @@ const ContactUs = () => {
 
           {/* Right Section (Form) */}
           <div className="flex-1 mr-4">
-  <form className="w-full mx-auto space-y-6 sm:w-3/4">
+  <form className="w-full mx-auto mt-5 ml-5 space-y-6 sm:w-3/4">
     <input
       type="text"
       placeholder="Enter Your Name"
