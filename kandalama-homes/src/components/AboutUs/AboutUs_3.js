@@ -79,7 +79,7 @@ const TeamSection = () => {
           </div>
 
           {/* Desktop view: Show grid */}
-          <div className="hidden grid-cols-1 gap-8 md:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="hidden grid-cols-1 gap-8 ml-20 mr-20 md:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {teamMembers.map((member, index) => (
     <div
       key={index}
