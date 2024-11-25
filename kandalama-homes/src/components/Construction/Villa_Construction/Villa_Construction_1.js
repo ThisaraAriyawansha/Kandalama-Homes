@@ -40,22 +40,24 @@ const Villa_1 = () => {
  {/* Desktop view: Show grid */}
       {/* Image Section */}
       <div className="hidden grid-cols-1 gap-1 p-10 md:grid mr-36 ml-36 md:grid-cols-3 md:px-8">
-      {images.map((image, index) => (
-          <motion.div
-            key={index}
-            className="overflow-hidden border-4 border-white rounded-lg w-[22rem]"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <img
-              src={image} // Dynamically using the image from the array
-              alt={`Villa Image ${index + 1}`}
-              className="object-cover w-[22rem] h-[22rem] rounded-lg"
-            />
-          </motion.div>
-        ))}
-      </div>
+  {images.map((image, index) => (
+    <motion.div
+      key={index}
+      className="overflow-hidden border-4 border-white rounded-lg w-[22rem]"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      whileHover={{ scale: 1.05 }} // Adds scaling on hover
+      whileTap={{ scale: 0.95 }} // Adds scaling when clicked
+    >
+      <img
+        src={image} // Dynamically using the image from the array
+        alt={`Villa Image ${index + 1}`}
+        className="object-cover w-[22rem] h-[22rem] rounded-lg transition-all duration-300" // Smooth transition for hover effects
+      />
+    </motion.div>
+  ))}
+</div>
 
 
 
