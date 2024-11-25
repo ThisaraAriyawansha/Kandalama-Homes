@@ -27,6 +27,31 @@ const settings = {
 };
 
 
+const settingsMore = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 1, // Only show one card at a time
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  centerMode: false, // Ensure no center mode to avoid partial cards on the sides
+  focusOnSelect: true, // Ensure focus on selecting the card
+  arrows: false, // Disable arrows
+  responsive: [
+    {
+      breakpoint: 768, // Mobile view settings
+      settings: {
+        slidesToShow: 1, // Show only 1 slide at a time on mobile
+        slidesToScroll: 1,
+        centerMode: false, // Disable center mode for mobile view
+        infinite: true, // Allow infinite scrolling on mobile
+      },
+    },
+  ],
+};
+
+
 
 const projects = [
   {
@@ -138,38 +163,72 @@ const OngoingProjects = () => {
 
     </div>
 
-        {isPopupOpen && selectedProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            
-  <div className="relative bg-white p-6 rounded-lg shadow-xl w-11/12 sm:w-2/4 md:w-2/4 lg:w-1/3 max-w-3xl max-h-[80vh] overflow-auto">
-    
-    {/* Close Button */}
-    <button
-      onClick={handleClosePopup}
-      className="absolute p-2 text-white bg-red-600 rounded-full top-4 right-4 hover:bg-red-700"
-    >
-      X
-    </button>
-    
-    {/* Header with Red Container */}
-    <div className="p-2 text-black rounded-t-lg">
-      <h2 className="text-xl text-center font-poppins">{selectedProject.name} - Images</h2>
-    </div>
+    {isPopupOpen && selectedProject && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    {/* Modal Container */}
+    <div className="relative bg-white p-6 rounded-lg shadow-xl w-11/12 sm:w-2/4 md:w-2/4 lg:w-1/3 max-w-3xl max-h-[80vh] overflow-auto">
 
-    {/* Image Grid */}
-    <div className="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3">
+      {/* Close Button (Desktop Version) */}
+      <button
+        onClick={handleClosePopup}
+        className="absolute hidden p-2 text-white bg-red-600 rounded-full top-4 right-4 hover:bg-red-700 md:block"
+      >
+        X
+      </button>
+      
+      {/* Header with Red Container */}
+      <div className="p-2 text-black rounded-t-lg">
+        <h2 className="text-xl text-center font-poppins">{selectedProject.name} - Images</h2>
+      </div>
+
+      {/* Desktop View: Grid Layout */}
+      <div className="hidden grid-cols-2 gap-4 mt-4 sm:grid sm:grid-cols-3">
+        {selectedProject.images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`${selectedProject.name} Image ${index + 1}`}
+            className="object-contain w-full h-auto"
+          />
+        ))}
+      </div>
+
+{/* Mobile View: Slider (One Image at a Time) */}
+<div className="w-full md:hidden max-h-[50vh]"> {/* Increased max-height for better view */}
+  
+  {/* Close Button (Mobile Version) */}
+  <button
+    onClick={handleClosePopup}
+    className="absolute p-2 text-lg text-white bg-red-600 rounded-full top-4 right-4 hover:bg-red-700 focus:outline-none"
+  >
+    X
+  </button>
+  
+  {/* Slider Container */}
+  <div className="w-11/12 mx-auto mt-4 max-h-[50vh] overflow-hidden"> 
+    <Slider {...settingsMore}>
       {selectedProject.images.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`${selectedProject.name} Image ${index + 1}`}
-          className="object-contain w-full h-auto"
-        />
+        <div key={index} className="flex items-center justify-center">
+          <img
+            src={image}
+            alt={`${selectedProject.name} Image ${index + 1}`}
+            className="object-contain w-full max-w-[90%] max-h-[40vh]"  
+          />
+        </div>
       ))}
-    </div>
+    </Slider>
   </div>
 </div>
+
+
+
+
+      
+    </div>
+  </div>
 )}
+
+
 
 
 
