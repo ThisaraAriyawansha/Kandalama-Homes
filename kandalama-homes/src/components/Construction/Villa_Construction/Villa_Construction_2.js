@@ -6,7 +6,7 @@ const VillaSection = () => {
   return (
     <div className="p-10 -mt-20 bg-white">
       <div className="w-full px-4 py-12">
-        <h2 className="mb-8 text-3xl font-poppins text-customGreen">
+        <h2 className="mb-8 text-xl text-center font-poppins text-customGreen sm:text-left sm:text-3xl">
           Why Build a Villa in Sri Lanka?
         </h2>
         <div className="grid gap-8 mx-auto sm:grid-cols-1 md:grid-cols-3">
