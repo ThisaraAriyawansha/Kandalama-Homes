@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="flex flex-col items-center w-full mb-6 sm:items-start sm:mb-0">
             <img
-              src="https://s3-alpha-sig.figma.com/img/f7c5/9cf4/8258870e24600f20f94471aff4cf1dbc?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UvHA6qzKCsJDb4c0xc6AXdSYPshZzs9kPEjDstyHc5Yri2vhM8IubdgvcIjJJtW5S~Nm~G4cZv7mUI3yDEqnpiJrUUARfbacwyWfUyF0uV-gCIimLYh8BDhkr0Cn5IEvgxQ5dpAnCcJN~ANw11Z59uOlvgC~oDqvwRL8sz5wME2-nQ~afzgRImZHVNi9EnncXLXEt2C73aQuGKMnLrfcI3zNxEGWCx2ILFIrSP~TdRmJuFm8kivg9lEtxLDUVY9eW8K2DOoDfO-5n785cZy-QxiZCKx-2WKk-Y8Ll5pVuqrWL5muAUDzsWOKFRbCjcpSlKgT65XdY-MdDB43Gspf-w__"
+              src="/images/414004164_377982111404002_5386038758596751474_n 1.jpg"
               alt="Company Logo"
               className="w-full sm:w-96 sm:h-60" // Full width on mobile, fixed size on desktop
             />
