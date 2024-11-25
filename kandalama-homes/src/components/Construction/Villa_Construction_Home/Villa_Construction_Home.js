@@ -2,6 +2,8 @@ import React, { useEffect } from "react"; // Import useEffect hook
 import Navbar from "../../NavBar";
 import Footer from "../../Footer";
 import Villa_Construction_Home_1 from "./Villa_Construction_Home_1";
+import Villa_Construction_Home_2 from "./Villa_Construction_Home_2";
+import CompletedProject from "../../Project/Project_3";
 
 
 const Villa = () => {
@@ -14,6 +16,8 @@ const Villa = () => {
     <div>
     <Navbar />
      <Villa_Construction_Home_1/>
+     <Villa_Construction_Home_2/>
+     <CompletedProject/>
     <Footer/>
 
     </div>
