@@ -91,31 +91,33 @@ const TeamSection = () => {
 
 
 
-          {/* Desktop view: Show grid */}
-          <div className="hidden grid-cols-1 gap-8 ml-20 mr-20 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {services.slice(0, 3).map((service, index) => (
-        <motion.div
-          key={index}
-          className="relative p-6 transition-shadow duration-300 rounded-lg shadow-sm hover:shadow-md"
-          whileHover={{ scale: 1.05 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          onClick={() => handleCardClick(service.title)} // Handle click
-        >
-          <div className="border-4 border-white rounded-[17px]">
-            <img
-              src={service.image}
-              alt={service.title}
-              className="object-cover w-full h-full rounded-[17px]"
-            />
-          </div>
-          <div className="absolute w-3/4 px-4 py-2 transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-md bg-opacity-5 top-1/2 left-1/2 backdrop-blur-md">
-            <h3 className="text-xl text-white sm:text-2xl font-sansita">{service.title}</h3>
-          </div>
-        </motion.div>
-      ))}
-    </div>
+{/* Desktop view: Show grid */}
+<div className="hidden grid-cols-1 gap-8 ml-20 mr-20 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  {services.slice(0, 3).map((service, index) => (
+    <motion.div
+      key={index}
+      className="relative p-6 transition-shadow duration-300 rounded-lg shadow-sm hover:shadow-md h-[75vh]" // Use percentage for height
+      whileHover={{ scale: 1.05 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.8 }}
+      onClick={() => handleCardClick(service.title)} // Handle click
+    >
+      <div className="border-4 border-white rounded-[1rem] h-full"> {/* Use rem for rounded corners */}
+        <img
+          src={service.image}
+          alt={service.title}
+          className="object-cover w-full h-full rounded-[1rem]" // Use rem for rounded corners
+        />
+      </div>
+      <div className="absolute w-[75%] px-[1rem] py-[0.5rem] transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-md bg-opacity-50 top-1/2 left-1/2 backdrop-blur-md">
+        <h3 className="text-xl text-white sm:text-2xl font-sansita">{service.title}</h3>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
+
 
 
         </div>
