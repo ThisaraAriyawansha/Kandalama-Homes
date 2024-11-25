@@ -1,6 +1,10 @@
 import React from "react";
 import Slider from "react-slick"; // Import the Slider component
 import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 const services = [
   {
@@ -27,6 +31,19 @@ const TeamSection = () => {
     slidesToScroll: 1,
   };
 
+
+  const navigate = useNavigate(); // This should be inside the component
+
+  const handleCardClick = (title) => {
+    if (title === 'Villa Construction') {
+      navigate('/villaConstruction');
+    } else if (title === 'Cabana Design') {
+      navigate('/cabanaConstruction');
+    } else if (title === 'Landscape Architecture') {
+      navigate('/landscapeConstruction');
+    }
+  };
+
   return (
     <div
     className="bg-center bg-cover border-4 border-white rounded-[47px] sm:h-[75vh] md:h-[100vh] h-[85vh]"
@@ -43,30 +60,31 @@ const TeamSection = () => {
 
           {/* Mobile view: Show slider */}
           <div className="md:hidden">
-  <Slider {...settings}>
-    {services.map((service, index) => (
-      <div
-        key={index}
-        className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[50vh]"
-      >
-        <div className="flex justify-center mb-6" style={{ height: "40vh" }}>
-          <img
-            src={service.image}
-            alt={service.title}
-            className="object-cover w-[80vw] h-[60vh] border-4 border-white rounded-[5%]"
-          />
-        </div>
+      <Slider {...settings}>
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[50vh]"
+            onClick={() => handleCardClick(service.title)}  // Add onClick to trigger navigation
+          >
+            <div className="flex justify-center mb-6" style={{ height: "40vh" }}>
+              <img
+                src={service.image}
+                alt={service.title}
+                className="object-cover w-[80vw] h-[60vh] border-4 border-white rounded-[5%]"
+              />
+            </div>
 
-        {/* Title with small blurred background */}
-        <h3 className="relative mt-4 text-lg text-center text-white sm:mt-6 sm:text-xl font-sansita">
-          <span className="absolute p-1 bg-black bg-opacity-50 rounded-lg backdrop-blur-md ">
-            {service.title}
-          </span>
-        </h3>
-      </div>
-    ))}
-  </Slider>
-</div>
+            {/* Title with small blurred background */}
+            <h3 className="relative mt-4 text-lg text-center text-white sm:mt-6 sm:text-xl font-sansita">
+              <span className="absolute p-1 bg-black bg-opacity-50 rounded-lg backdrop-blur-md ">
+                {service.title}
+              </span>
+            </h3>
+          </div>
+        ))}
+      </Slider>
+    </div>
 
 
 
@@ -75,28 +93,29 @@ const TeamSection = () => {
 
           {/* Desktop view: Show grid */}
           <div className="hidden grid-cols-1 gap-8 ml-20 mr-20 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-  {services.slice(0, 3).map((service, index) => (
-    <motion.div
-      key={index}
-      className="relative p-6 transition-shadow duration-300 rounded-lg shadow-sm hover:shadow-md"
-      whileHover={{ scale: 1.05 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="border-4 border-white rounded-[17px]">
-        <img
-          src={service.image}
-          alt={service.title}
-          className="object-cover w-full h-full rounded-[17px]"
-        />
-      </div>
-      <div className="absolute w-3/4 px-4 py-2 transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-md bg-opacity-5 top-1/2 left-1/2 backdrop-blur-md"> {/* Title centered */}
-        <h3 className="text-xl text-white sm:text-2xl font-sansita">{service.title}</h3>
-      </div>
-    </motion.div>
-  ))}
-</div>
+      {services.slice(0, 3).map((service, index) => (
+        <motion.div
+          key={index}
+          className="relative p-6 transition-shadow duration-300 rounded-lg shadow-sm hover:shadow-md"
+          whileHover={{ scale: 1.05 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
+          onClick={() => handleCardClick(service.title)} // Handle click
+        >
+          <div className="border-4 border-white rounded-[17px]">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="object-cover w-full h-full rounded-[17px]"
+            />
+          </div>
+          <div className="absolute w-3/4 px-4 py-2 transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-md bg-opacity-5 top-1/2 left-1/2 backdrop-blur-md">
+            <h3 className="text-xl text-white sm:text-2xl font-sansita">{service.title}</h3>
+          </div>
+        </motion.div>
+      ))}
+    </div>
 
 
         </div>
