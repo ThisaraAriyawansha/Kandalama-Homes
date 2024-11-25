@@ -5,6 +5,9 @@ import AboutPage from "./components/AboutUs/AboutUs";
 import Navbar from "./components/NavBar";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Project from "./components/Project/Project";
+import VillaConstruction from "./components/Construction/Villa_Construction/Villa_Construction";
+import CabanaConstruction from "./components/Construction/Cabana_Construction/Cabana_Construction";
+import LandscapeConstruction from "./components/Construction/Landscape_Construction/Landscape_Construction";
 
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/projects" element={<Project />} />
+        <Route path="/villaConstruction" element={<VillaConstruction />} />
+        <Route path="/cabanaConstruction" element={<CabanaConstruction />} />
+        <Route path="/landscapeConstruction" element={<LandscapeConstruction />} />
 
 
 
