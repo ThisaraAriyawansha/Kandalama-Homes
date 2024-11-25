@@ -4,7 +4,7 @@ const CustomerReviews = () => {
   const reviews = [
     {
       name: 'Kasun Malinda',
-      image: 'https://s3-alpha-sig.figma.com/img/902f/3491/4850bc0007f8f9d9194789eb4b743975?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XzuMJo18peb8X7vicaU9UvEu8Vuzmg89AOAq6ZrpNElttFKyvPtGuk2GCkxWCJWl6EL5M1ihN~N9mG5olTEpaUo3ngM-rW-wxrSj2H5faFc9wxOVKATybQoJcTkb1LblzKrGRWwqSEw1nJ08tJpRaFLGKxZ5DhbAif801IMlVxFxHG2qIYPd-fbrxtIFeh7g00xDq9aweM4RfM732YxCqJyG2VErDmlOdzNcx~5NncFYdWAq9ss9LD54ZLEm0D39c0JH2CDXQvHgHL6W2q6F8AGMlJFuZIxNSF-QCaiCtil7aRu7AZhtrL2moAeuRbVP~JCP96-7c3jpKZTFyuVP~w__', // Replace with the actual image URL
+      image: '/images/Ellipse 2.jpg', // Replace with the actual image URL
       rating: 5,
       company: 'Sigiri Arts',
       feedback:
@@ -12,7 +12,7 @@ const CustomerReviews = () => {
     },
     {
       name: 'Ayesh Nimantha',
-      image: 'https://s3-alpha-sig.figma.com/img/05bc/b56e/115155a54dcccbbf19e96a53b3a00d26?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OWKboMAzQBgSbAtf06VTySk-84PF6YfTgzJtTOxl9gCS7tVeq~OfI07TLjlthdJ3fsZucuN~AmHWWRokapxn4QKI36SmsaIixNBdnToCYRUCXFpesyziVoJqWJxZsnm~YYsbOMDlAjjIRmhDQoPAkmAsLug-kIi2Q-FUOkTnRYC0OOYGezFOGlJoD5h-n~dzTqyrfy0833YhvMnc57kA8yYWS-4xYLdvPowjiNordJxtdEUVKQP09Df6umzj~1RGdI5lSp8-Y~BButrgyo7R8aiUFPpNrphI5ZWtWkUUqc~sqPhX-WejWJuBbFWoxe37za9L1-PeMdTPN4hVYlYxMQ__', // Replace with the actual image URL
+      image: '/images/Ellipse 2 (1).jpg', // Replace with the actual image URL
       rating: 4,
       company: 'Sigiri Arts',
       feedback:
@@ -20,7 +20,7 @@ const CustomerReviews = () => {
     },
     {
         name: 'Kasun Malinda',
-        image: 'https://s3-alpha-sig.figma.com/img/902f/3491/4850bc0007f8f9d9194789eb4b743975?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XzuMJo18peb8X7vicaU9UvEu8Vuzmg89AOAq6ZrpNElttFKyvPtGuk2GCkxWCJWl6EL5M1ihN~N9mG5olTEpaUo3ngM-rW-wxrSj2H5faFc9wxOVKATybQoJcTkb1LblzKrGRWwqSEw1nJ08tJpRaFLGKxZ5DhbAif801IMlVxFxHG2qIYPd-fbrxtIFeh7g00xDq9aweM4RfM732YxCqJyG2VErDmlOdzNcx~5NncFYdWAq9ss9LD54ZLEm0D39c0JH2CDXQvHgHL6W2q6F8AGMlJFuZIxNSF-QCaiCtil7aRu7AZhtrL2moAeuRbVP~JCP96-7c3jpKZTFyuVP~w__', // Replace with the actual image URL
+        image: '/images/Ellipse 2.jpg', // Replace with the actual image URL
         rating: 5,
         company: 'Sigiri Arts',
         feedback:
@@ -28,7 +28,7 @@ const CustomerReviews = () => {
       },
       {
         name: 'Ayesh Nimantha',
-        image: 'https://s3-alpha-sig.figma.com/img/05bc/b56e/115155a54dcccbbf19e96a53b3a00d26?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OWKboMAzQBgSbAtf06VTySk-84PF6YfTgzJtTOxl9gCS7tVeq~OfI07TLjlthdJ3fsZucuN~AmHWWRokapxn4QKI36SmsaIixNBdnToCYRUCXFpesyziVoJqWJxZsnm~YYsbOMDlAjjIRmhDQoPAkmAsLug-kIi2Q-FUOkTnRYC0OOYGezFOGlJoD5h-n~dzTqyrfy0833YhvMnc57kA8yYWS-4xYLdvPowjiNordJxtdEUVKQP09Df6umzj~1RGdI5lSp8-Y~BButrgyo7R8aiUFPpNrphI5ZWtWkUUqc~sqPhX-WejWJuBbFWoxe37za9L1-PeMdTPN4hVYlYxMQ__', // Replace with the actual image URL
+        image: '/images/Ellipse 2 (1).jpg', // Replace with the actual image URL
         rating: 4,
         company: 'Sigiri Arts',
         feedback:
@@ -36,7 +36,7 @@ const CustomerReviews = () => {
       },
       {
         name: 'Ayesh ',
-        image: 'https://s3-alpha-sig.figma.com/img/05bc/b56e/115155a54dcccbbf19e96a53b3a00d26?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OWKboMAzQBgSbAtf06VTySk-84PF6YfTgzJtTOxl9gCS7tVeq~OfI07TLjlthdJ3fsZucuN~AmHWWRokapxn4QKI36SmsaIixNBdnToCYRUCXFpesyziVoJqWJxZsnm~YYsbOMDlAjjIRmhDQoPAkmAsLug-kIi2Q-FUOkTnRYC0OOYGezFOGlJoD5h-n~dzTqyrfy0833YhvMnc57kA8yYWS-4xYLdvPowjiNordJxtdEUVKQP09Df6umzj~1RGdI5lSp8-Y~BButrgyo7R8aiUFPpNrphI5ZWtWkUUqc~sqPhX-WejWJuBbFWoxe37za9L1-PeMdTPN4hVYlYxMQ__', // Replace with the actual image URL
+        image: '/images/Ellipse 2 (1).jpg', // Replace with the actual image URL
         rating: 4,
         company: 'Sigiri Arts',
         feedback:
@@ -44,7 +44,7 @@ const CustomerReviews = () => {
       },
       {
         name: 'Kasun ',
-        image: 'https://s3-alpha-sig.figma.com/img/902f/3491/4850bc0007f8f9d9194789eb4b743975?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XzuMJo18peb8X7vicaU9UvEu8Vuzmg89AOAq6ZrpNElttFKyvPtGuk2GCkxWCJWl6EL5M1ihN~N9mG5olTEpaUo3ngM-rW-wxrSj2H5faFc9wxOVKATybQoJcTkb1LblzKrGRWwqSEw1nJ08tJpRaFLGKxZ5DhbAif801IMlVxFxHG2qIYPd-fbrxtIFeh7g00xDq9aweM4RfM732YxCqJyG2VErDmlOdzNcx~5NncFYdWAq9ss9LD54ZLEm0D39c0JH2CDXQvHgHL6W2q6F8AGMlJFuZIxNSF-QCaiCtil7aRu7AZhtrL2moAeuRbVP~JCP96-7c3jpKZTFyuVP~w__', // Replace with the actual image URL
+        image: '/images/Ellipse 2.jpg', // Replace with the actual image URL
         rating: 5,
         company: 'Sigiri Arts',
         feedback:
@@ -53,7 +53,7 @@ const CustomerReviews = () => {
 
       {
         name: 'Kasun ',
-        image: 'https://s3-alpha-sig.figma.com/img/902f/3491/4850bc0007f8f9d9194789eb4b743975?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XzuMJo18peb8X7vicaU9UvEu8Vuzmg89AOAq6ZrpNElttFKyvPtGuk2GCkxWCJWl6EL5M1ihN~N9mG5olTEpaUo3ngM-rW-wxrSj2H5faFc9wxOVKATybQoJcTkb1LblzKrGRWwqSEw1nJ08tJpRaFLGKxZ5DhbAif801IMlVxFxHG2qIYPd-fbrxtIFeh7g00xDq9aweM4RfM732YxCqJyG2VErDmlOdzNcx~5NncFYdWAq9ss9LD54ZLEm0D39c0JH2CDXQvHgHL6W2q6F8AGMlJFuZIxNSF-QCaiCtil7aRu7AZhtrL2moAeuRbVP~JCP96-7c3jpKZTFyuVP~w__', // Replace with the actual image URL
+        image: '/images/Ellipse 2.jpg', // Replace with the actual image URL
         rating: 5,
         company: 'Sigiri Arts',
         feedback:
@@ -61,7 +61,7 @@ const CustomerReviews = () => {
       },
       {
         name: 'Ayesh ',
-        image: 'https://s3-alpha-sig.figma.com/img/05bc/b56e/115155a54dcccbbf19e96a53b3a00d26?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OWKboMAzQBgSbAtf06VTySk-84PF6YfTgzJtTOxl9gCS7tVeq~OfI07TLjlthdJ3fsZucuN~AmHWWRokapxn4QKI36SmsaIixNBdnToCYRUCXFpesyziVoJqWJxZsnm~YYsbOMDlAjjIRmhDQoPAkmAsLug-kIi2Q-FUOkTnRYC0OOYGezFOGlJoD5h-n~dzTqyrfy0833YhvMnc57kA8yYWS-4xYLdvPowjiNordJxtdEUVKQP09Df6umzj~1RGdI5lSp8-Y~BButrgyo7R8aiUFPpNrphI5ZWtWkUUqc~sqPhX-WejWJuBbFWoxe37za9L1-PeMdTPN4hVYlYxMQ__', // Replace with the actual image URL
+        image: '/images/Ellipse 2 (1).jpg', // Replace with the actual image URL
         rating: 4,
         company: 'Sigiri Arts',
         feedback:

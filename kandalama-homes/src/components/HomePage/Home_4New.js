@@ -9,15 +9,15 @@ import { useNavigate } from 'react-router-dom';
 const services = [
   {
     title: "Villa Construction",
-    image: "https://s3-alpha-sig.figma.com/img/e66a/4323/29450b5e5710977a15d5fc7ebf25b25d?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nyf1E2D0BqvRsA-AhEXsWOgf776vV2sbNzUQEDR-Yl4iSkRbAYuO~985liUP4aDqtdHTE3LZqjn090jLV8VDcKEMDed2HojpXHWWrbXhz~pO50ImRFpRMu3LAWpvBIegMfejagNPjINvEx22nZMr7WdRCXAS6tGIw6NQYe--8BZPUyENc~fEqBixO-kCBwI35veetSPkOWOZLrx3lBStjONbfswUc5S3j0xAEG3RtIlkR8mRfjyhYf-3ZOR8DoVZbCpSsl5HcvnD010uRro7wVf6kugAuyCt5RHGjqDecAsmUEVOb6CUZoamBpf10XZMbpZWhwl013ra1dF3d2x2~A__",
+    image: "/images/29450b5e5710977a15d5fc7ebf25b25d.jpeg",
   },
   {
     title: "Cabana Design",
-    image: "https://s3-alpha-sig.figma.com/img/efcd/a149/2da1148aa0259570a4bc587e509bbbdd?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cto-LbeuVMHfCQeyX4rUvAWYm4K3T-uU-cZqsLFwm4hok0WO7wwcvaJ6n~-H8lXHsK4q6--00bLrNNBWS7J1jX2w5haTTq2Y3KGYCzRij2rsEtvY3--L747Q17Ar3jZ0Qf39eUXBzG~iPEFXpwRmPem1Pe~eAFY4sl732JMSJKBNu9NtcFhXwlihbcs~9k4bqdookrhlbvEgwI~uEGGrSgTWwo4yRGPQEMyIEldnFG18v4rO1rFUKRzHaPwD6yRVRFG9-L0khDxWnh9iFkzEF8pExLafr4mRgrOy50hY62c3lJkNQVyNgr3S-bhrcHFI5~yqUT01b0hogfQ8O16NVA__",
+    image: "/images/Rectangle 12.jpg",
   },
   {
     title: "Landscape Architecture",
-    image: "https://s3-alpha-sig.figma.com/img/5725/e9b4/326d2352d6b3186f7bee1869e69dfe20?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y5OK0Yf9ZrSJWpjzMS~Mk5TqqOq8-SEygUxbUxUglchHNWDBqhGR5T1zWJSPgFado5vkDfKf2fcwQrCbthf8iu4YrT2jUWdGeJYgo9aoByYC2bT80pxDCa5F1e~RcUSUwAJBX-f8Caqb-A6G~9HX6bIcQGh-dfmhFxwISugdmQLxdLSlUsxdZP3lDi4xFvkgblhBrIXDXvJYe1XO5NSy-m73LO~-hQOVwjaDRU-rdyaKxcngVgbX2pv4Jk4eHzvdj8rVP3oQK1NslovumFbvTsWujVRNuG7KsWhTsjzwLs7UMdUsMZSgGWyk0KbuuSITYE4xQ~yo5sJMhVBa0RlUtA__",
+    image: "/images/Rectangle 12 (1).jpg",
   },
 ];
 
