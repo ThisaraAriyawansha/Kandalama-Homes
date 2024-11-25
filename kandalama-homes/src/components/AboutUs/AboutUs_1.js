@@ -5,7 +5,7 @@ import "./AboutUs_1.css";
 const AboutUs = () => {
   return (
     <div className="relative h-screen rounded-[5%] bg-white border-4 border-white about-container">
-      <div className="h-full">
+      <div className="h-full ">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-center bg-cover rounded-[5%] bg-image h-full"
