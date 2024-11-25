@@ -165,7 +165,7 @@ const Completed_Projects = () => {
     {isPopupOpen && selectedProject && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
     {/* Modal Container */}
-    <div className="relative bg-white p-6 rounded-lg shadow-xl w-11/12 sm:w-2/4 md:w-2/4 lg:w-1/3 max-w-3xl max-h-[80vh] overflow-auto">
+    <div className="relative sm:bg-white bg-transparent p-6 rounded-lg shadow-xl w-11/12 sm:w-2/4 md:w-2/4 lg:w-1/3 max-w-3xl max-h-[80vh] overflow-auto">
 
       {/* Close Button (Desktop Version) */}
       <button
@@ -176,7 +176,7 @@ const Completed_Projects = () => {
       </button>
       
       {/* Header with Red Container */}
-      <div className="p-2 text-black rounded-t-lg">
+      <div className="p-2 text-white rounded-t-lg sm:text-black">
         <h2 className="text-xl text-center font-poppins">{selectedProject.name} - Images</h2>
       </div>
 
@@ -194,19 +194,23 @@ const Completed_Projects = () => {
 
 
 
-{/* Mobile View: Slider (One Image at a Time) */}
-<div className="w-full md:hidden max-h-[40vh]"> {/* Reduced max-height for smaller view */}
-  
+{/* Mobile View Modal: Slider (One Image at a Time) */}
+<div className="w-full md:hidden max-h-[50vh] relative bg-white"> {/* Reduced max-height for smaller view */}
+
   {/* Close Button (Mobile Version) */}
   <button
     onClick={handleClosePopup}
-    className="absolute p-2 text-lg text-white bg-red-600 rounded-full top-4 right-4 hover:bg-red-700 focus:outline-none"
+    className="w-6 h-6 p-1 text-white bg-red-600 rounded-full top-2 right-2 hover:bg-red-700 focus:outline-none"
   >
-    X
+    {/* Close icon using FontAwesome (you can also use another icon library or SVG) */}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+      <path d="M12 10.586L16.707 6.879l1.414 1.414L13.414 12l4.707 4.707-1.414 1.414L12 13.414l-4.707 4.707-1.414-1.414L10.586 12 5.879 7.293l1.414-1.414L12 10.586z"/>
+    </svg>
   </button>
-  
+
   {/* Slider Container */}
-  <div className="w-10/12 mx-auto mt-4 max-h-[40vh] overflow-hidden items-center justify-center">
+  <div className="w-10/12 mx-auto mt-2 max-h-[40vh] overflow-hidden items-center justify-center  bg-opacity-20 rounded-lg ">
+    {/* bg-opacity-20: reduces the white background to 20% opacity */}
     {selectedProject.images.length > 1 ? (
       <Slider {...settingsMore}>
         {selectedProject.images.map((image, index) => (
@@ -214,7 +218,7 @@ const Completed_Projects = () => {
             <img
               src={image}
               alt={`${selectedProject.name} Image ${index + 1}`}
-              className="object-contain w-full max-w-[85%] max-h-[35vh] items-center justify-center"
+              className="object-contain w-full max-w-[100%] max-h-[35vh] items-center justify-center"
             />
           </div>
         ))}
@@ -230,7 +234,6 @@ const Completed_Projects = () => {
     )}
   </div>
 </div>
-
 
 
 
