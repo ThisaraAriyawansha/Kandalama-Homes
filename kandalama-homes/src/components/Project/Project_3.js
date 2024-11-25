@@ -57,7 +57,7 @@ const projects = [
   {
     name: "H. Perera",
     images: [
-      "https://s3-alpha-sig.figma.com/img/bf96/bdd5/178b09012c8add2e85fab7ae2e78bec1?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q08qyykcVK2Wu0R2Z~n1o66blm7Otdz5iZ9NxiNQjlIDuQyP26fmA21Gm66TOx6iSEixSuG4Gi9bC4AWHI5VfCk8wZ6cqPUgf9XXf1T8mPEdHagJgFXth0daytXpsArdVCPZ9Qi0OCuOgqjs5w8mBNr-jhIT0PLyxuhX3PMLXPq49bsEwpIdAq0rWg59N7yKhjuUtEOdQJYnuVRoSsR79aNEIG9JJ4AyVdkhGv2CnEqvmQ12UBqniMLrZetq1gj8YwyINHA5TUnoYo9XI1C~IMTBNpOc4SOFl-vHNSRXzG2Z7F8Ec5OqccUIAh4Go9BcjitW29ZnCw3HBFdhOAxHVQ__",
+      "/images/178b09012c8add2e85fab7ae2e78bec1.jpeg",
      
     ]
   }
