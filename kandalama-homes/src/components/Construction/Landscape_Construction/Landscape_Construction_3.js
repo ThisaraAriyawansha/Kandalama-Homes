@@ -32,20 +32,20 @@ const VisionSection = () => {
 
         {/* Button with hover and scroll animation */}
         <Link to="/contact">
-          <motion.button
-            className="px-8 py-3 text-sm text-white transition rounded-md hover:bg-green-700 bg-customGreen font-poppins sm:text-base md:text-lg"
-            whileHover={{
-              scale: 1.2,
-              rotate: 5,
-              transition: { duration: 0.3 },
-            }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            Contact Us
-          </motion.button>
-        </Link>
+  <motion.button
+    className="px-8 py-3 text-sm text-white transition rounded-md hover:bg-green-700 bg-customGreen font-poppins sm:text-base md:text-lg"
+    whileHover={{
+      scale: 1.05, // Subtle scale on hover
+      transition: { duration: 0.3 }, // Smooth transition
+    }}
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.3 }} // Fade-in with a slight delay
+  >
+    Contact Us
+  </motion.button>
+</Link>
+
       </div>
     </div>
   );
