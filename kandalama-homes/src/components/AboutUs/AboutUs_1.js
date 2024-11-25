@@ -10,7 +10,7 @@ const AboutUs = () => {
       <div
         className="absolute inset-0 bg-center bg-cover rounded-[5%] bg-image h-full"
         style={{
-          backgroundImage: `url('https://s3-alpha-sig.figma.com/img/2f4e/4d4a/e73c50733a360df02fb7720ed6359427?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SqgTg5uboxfk~xlf0Sk~8JdN-jjMbsFHuu3B3vWaa875XzDbM6klXHQAd3PAE~ZYY4QJDODqUqYj2astIgs4R12iHTlZKzi3NCNmRHTdzlKDXzrH83vhBbJEY3mB-L4XaIGlkN6vCB58Y6AltitGpO5ZW9FA71S2XOpj7zsyLT~JTO-Zd5O1jtX0721RE5pGE3144GJ7Q8m8PDgVpuMVaAsUOmdCeyo7aCVGKvgkTmREcrBpTio5wZ4S8iVKoG-QrDeswh62h~WsP3LKTp37tQtwVMSRMXy3La1IhQtU9rzcZoBoWj26eXINi-7pS0M3Powegdf2MOXCQibTHg0Rag__')`,
+          backgroundImage: `url('/images/Rectangle 25.jpg')`,
         }}
       ></div>
 
