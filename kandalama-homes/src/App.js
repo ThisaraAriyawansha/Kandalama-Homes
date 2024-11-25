@@ -8,6 +8,7 @@ import Project from "./components/Project/Project";
 import VillaConstruction from "./components/Construction/Villa_Construction/Villa_Construction";
 import CabanaConstruction from "./components/Construction/Cabana_Construction/Cabana_Construction";
 import LandscapeConstruction from "./components/Construction/Landscape_Construction/Landscape_Construction";
+import ContactUs_1 from "./components/ContactUs/ContactUs_1";
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <Route path="/villaConstruction" element={<VillaConstruction />} />
         <Route path="/cabanaConstruction" element={<CabanaConstruction />} />
         <Route path="/landscapeConstruction" element={<LandscapeConstruction />} />
+        <Route path="/landscapeConstruction" element={<LandscapeConstruction />} />
+        <Route path="/contactUs_1" element={<ContactUs_1 />} />
 
 
 
