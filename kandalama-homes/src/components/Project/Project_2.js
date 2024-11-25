@@ -1,4 +1,32 @@
 import React, { useState } from "react";
+import Slider from "react-slick";
+
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1, // Only show one card at a time
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  centerMode: false, // Ensure no center mode to avoid partial cards on the sides
+  focusOnSelect: true, // Ensure focus on selecting the card
+  arrows: false, // Disable arrows
+  responsive: [
+    {
+      breakpoint: 768, // Mobile view settings
+      settings: {
+        slidesToShow: 1, // Show only 1 slide at a time on mobile
+        slidesToScroll: 1,
+        centerMode: false, // Disable center mode for mobile view
+        infinite: true, // Allow infinite scrolling on mobile
+      },
+    },
+  ],
+};
+
+
 
 const projects = [
   {
@@ -53,35 +81,67 @@ const OngoingProjects = () => {
           This is a brief description of the project, explaining the goals,
           purpose, and unique features of the project.
         </p>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="mx-4 overflow-hidden transition bg-white rounded-lg shadow-md hover:shadow-lg"
-            >
-              <img
-                src={project.images[0]} // Use the first image as a thumbnail
-                alt={project.name}
-                className="object-cover w-full h-48"
-              />
-              <div className="p-4 text-center">
-                <h3 className="mb-2 text-lg text-black font-poppins">{project.name}</h3>
-                <button
-                  className="px-4 py-2 text-white bg-customGreen font-poppins"
-                  onClick={() => handleViewAllImagesClick(project)}
-                >
-                  View All Images
-                </button>
-              </div>
-            </div>
-          ))}
 
-          
+        <div>
+      {/* Desktop view: Show grid */}
+      <div className="hidden grid-cols-1 gap-6 md:grid sm:grid-cols-2 md:grid-cols-3">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="mx-4 overflow-hidden transition bg-white rounded-lg shadow-md hover:shadow-lg"
+          >
+            <img
+              src={project.images[0]} // Use the first image as a thumbnail
+              alt={project.name}
+              className="object-cover w-full h-48"
+            />
+            <div className="p-4 text-center">
+              <h3 className="mb-2 text-lg text-black font-poppins">{project.name}</h3>
+              <button
+                className="px-4 py-2 text-white bg-customGreen font-poppins"
+                onClick={() => handleViewAllImagesClick(project)}
+              >
+                View All Images
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile view: Show slider */}
+      <div className="w-full md:hidden slider-container">
+  <Slider {...settings}>
+    {projects.map((project, index) => (
+      <div
+        key={index}
+        className="w-full mx-0 overflow-hidden transition bg-white rounded-lg shadow-md hover:shadow-lg"
+      >
+        <img
+          src={project.images[0]} // Use the first image as a thumbnail
+          alt={project.name}
+          className="object-cover w-full h-48"
+        />
+        <div className="p-4 text-center">
+          <h3 className="mb-2 text-lg text-black font-poppins">{project.name}</h3>
+          <button
+            className="px-4 py-2 text-white bg-customGreen font-poppins"
+            onClick={() => handleViewAllImagesClick(project)}
+          >
+            View All Images
+          </button>
         </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
+
+    </div>
 
         {isPopupOpen && selectedProject && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-  <div className="relative bg-white p-6 rounded-lg shadow-xl w-2/4 max-w-3xl max-h-[80vh] overflow-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            
+  <div className="relative bg-white p-6 rounded-lg shadow-xl w-11/12 sm:w-2/4 md:w-2/4 lg:w-1/3 max-w-3xl max-h-[80vh] overflow-auto">
     
     {/* Close Button */}
     <button
@@ -97,7 +157,7 @@ const OngoingProjects = () => {
     </div>
 
     {/* Image Grid */}
-    <div className="grid grid-cols-3 gap-4 mt-4">
+    <div className="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3">
       {selectedProject.images.map((image, index) => (
         <img
           key={index}
@@ -106,29 +166,30 @@ const OngoingProjects = () => {
           className="object-contain w-full h-auto"
         />
       ))}
-
-
-      
     </div>
   </div>
+</div>
+)}
+
+
+
+
+      </div>
+
+            {/* Pagination */}
+            <div className="items-center justify-center hidden mt-8 space-x-2 md:flex">
+  <button className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+    <i className="fas fa-chevron-left"></i>
+  </button>
+  <span className="px-4 py-2 text-white rounded-full bg-customGreen">1</span>
+  <button className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+    <i className="fas fa-chevron-right"></i>
+  </button>
 </div>
 
 
 
 
-        )}
-      </div>
-
-            {/* Pagination */}
-            <div className="flex items-center justify-center mt-8 space-x-2">
-        <button className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-          <i className="fas fa-chevron-left"></i>
-        </button>
-        <span className="px-4 py-2 text-white rounded-full bg-customGreen">1</span>
-        <button className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
-          <i className="fas fa-chevron-right"></i>
-        </button>
-      </div>
     </div>
   );
 };
