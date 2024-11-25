@@ -20,7 +20,7 @@ const services = [
 const TeamSection = () => {
   // Slick slider settings for mobile view
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1, // Show one service at a time
@@ -29,13 +29,13 @@ const TeamSection = () => {
 
   return (
     <div
-      className="bg-center bg-cover border-4 border-white rounded-[47px]"
-      style={{
+    className="bg-center bg-cover border-4 border-white rounded-[47px] sm:h-[75vh] md:h-[100vh] h-[85vh]"
+    style={{
         backgroundImage:
           "url('https://s3-alpha-sig.figma.com/img/60da/b4a3/15a09469f8e42864c8d808b51b0a03c2?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YLliejqxW5ELKNwBDJ8k1UIVO4O-L1F6wJvz5I2iiJxllT-vfJ4mFEHT3UbGSa88f-OUcpLeIqoAYVJ1jdMuVPqmckSr0VyjZIoMlohceA5y9h~FhwwzpRZrr-3TgDmM7TUxWpXFgc-P~h4O3X3y5DQ-PzhgIKPZn83iBE3yR~axEl~UpcLNijxM0E8vpsYb-H9kYZsC1k02ZZch8u1Z7ieDAob01rZ9Ozyc4F~LS7WIGZ8wd9Hj-caNVIzX~65wuj99Iqqut1xk~lQVo-5bOngUg~kgOK9L1Cjd32ggEPEBBZgxk1lZNn-29UZ9eAnaosIkz8T5hAFsLtas5j0rXw__')",
       }}
     >
-      <div className="w-full min-h-screen rounded-[47px]" style={{ backgroundColor: "rgba(0, 90, 78, 0.49)" }}>
+      <div className="w-full h-full rounded-[47px] " style={{ backgroundColor: "rgba(0, 90, 78, 0.49)" }}>
         <div className="container p-20 mx-auto text-center text-white">
           <h2 className="mb-4 text-2xl font-bold text-center sm:text-left sm:text-4xl font-quando">
           OUR SERVICES
@@ -47,19 +47,19 @@ const TeamSection = () => {
     {services.map((service, index) => (
       <div
         key={index}
-        className="flex flex-col items-center  justify-center  transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[80vh]"
+        className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[50vh]"
       >
-        <div className="flex justify-center mb-6 h-[450px]">
+        <div className="flex justify-center mb-6" style={{ height: "40vh" }}>
           <img
             src={service.image}
             alt={service.title}
-            className="object-cover  w-[400px] h-[650px] border-4 border-white rounded-[17px]"
+            className="object-cover w-[80vw] h-[60vh] border-4 border-white rounded-[5%]"
           />
         </div>
-        
+
         {/* Title with small blurred background */}
         <h3 className="relative mt-4 text-lg text-center text-white sm:mt-6 sm:text-xl font-sansita">
-          <span className="absolute inset-0 h-20 p-5 bg-black bg-opacity-50 rounded-lg backdrop-blur-sm">
+          <span className="absolute p-1 bg-black bg-opacity-50 rounded-lg backdrop-blur-md ">
             {service.title}
           </span>
         </h3>
@@ -67,6 +67,7 @@ const TeamSection = () => {
     ))}
   </Slider>
 </div>
+
 
 
 
