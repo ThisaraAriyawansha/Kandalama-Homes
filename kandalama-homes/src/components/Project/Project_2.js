@@ -208,7 +208,7 @@ const OngoingProjects = () => {
   </button>
   
   {/* Slider Container */}
-  <div className="w-10/12 mx-auto mt-4 max-h-[40vh] overflow-hidden flex justify-center items-center"> {/* Added flexbox centering */}
+  <div className="w-10/12 mx-auto mt-4 max-h-[40vh] overflow-hidden items-center justify-center">
     {selectedProject.images.length > 1 ? (
       <Slider {...settingsMore}>
         {selectedProject.images.map((image, index) => (
@@ -216,7 +216,7 @@ const OngoingProjects = () => {
             <img
               src={image}
               alt={`${selectedProject.name} Image ${index + 1}`}
-              className="object-contain w-full max-w-[85%] max-h-[35vh]"
+              className="object-contain w-full max-w-[85%] max-h-[35vh] items-center justify-center"
             />
           </div>
         ))}
@@ -226,13 +226,12 @@ const OngoingProjects = () => {
         <img
           src={selectedProject.images[0]}
           alt={`${selectedProject.name} Image`}
-          className="object-contain w-full max-w-[85%] max-h-[35vh]"
+          className="object-contain w-full max-w-[85%] max-h-[35vh] items-center justify-center"
         />
       </div>
     )}
   </div>
 </div>
-
 
 
 
