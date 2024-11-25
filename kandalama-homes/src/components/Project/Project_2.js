@@ -57,7 +57,8 @@ const projects = [
   {
     name: "H. Perera",
     images: [
-      "https://s3-alpha-sig.figma.com/img/bf96/bdd5/178b09012c8add2e85fab7ae2e78bec1?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q08qyykcVK2Wu0R2Z~n1o66blm7Otdz5iZ9NxiNQjlIDuQyP26fmA21Gm66TOx6iSEixSuG4Gi9bC4AWHI5VfCk8wZ6cqPUgf9XXf1T8mPEdHagJgFXth0daytXpsArdVCPZ9Qi0OCuOgqjs5w8mBNr-jhIT0PLyxuhX3PMLXPq49bsEwpIdAq0rWg59N7yKhjuUtEOdQJYnuVRoSsR79aNEIG9JJ4AyVdkhGv2CnEqvmQ12UBqniMLrZetq1gj8YwyINHA5TUnoYo9XI1C~IMTBNpOc4SOFl-vHNSRXzG2Z7F8Ec5OqccUIAh4Go9BcjitW29ZnCw3HBFdhOAxHVQ__"
+      "https://s3-alpha-sig.figma.com/img/bf96/bdd5/178b09012c8add2e85fab7ae2e78bec1?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q08qyykcVK2Wu0R2Z~n1o66blm7Otdz5iZ9NxiNQjlIDuQyP26fmA21Gm66TOx6iSEixSuG4Gi9bC4AWHI5VfCk8wZ6cqPUgf9XXf1T8mPEdHagJgFXth0daytXpsArdVCPZ9Qi0OCuOgqjs5w8mBNr-jhIT0PLyxuhX3PMLXPq49bsEwpIdAq0rWg59N7yKhjuUtEOdQJYnuVRoSsR79aNEIG9JJ4AyVdkhGv2CnEqvmQ12UBqniMLrZetq1gj8YwyINHA5TUnoYo9XI1C~IMTBNpOc4SOFl-vHNSRXzG2Z7F8Ec5OqccUIAh4Go9BcjitW29ZnCw3HBFdhOAxHVQ__",
+     
     ]
   },
   {
@@ -193,8 +194,10 @@ const OngoingProjects = () => {
         ))}
       </div>
 
+
+
 {/* Mobile View: Slider (One Image at a Time) */}
-<div className="w-full md:hidden max-h-[50vh]"> {/* Increased max-height for better view */}
+<div className="w-full md:hidden max-h-[40vh]"> {/* Reduced max-height for smaller view */}
   
   {/* Close Button (Mobile Version) */}
   <button
@@ -205,20 +208,33 @@ const OngoingProjects = () => {
   </button>
   
   {/* Slider Container */}
-  <div className="w-11/12 mx-auto mt-4 max-h-[50vh] overflow-hidden"> 
-    <Slider {...settingsMore}>
-      {selectedProject.images.map((image, index) => (
-        <div key={index} className="flex items-center justify-center">
-          <img
-            src={image}
-            alt={`${selectedProject.name} Image ${index + 1}`}
-            className="object-contain w-full max-w-[90%] max-h-[40vh]"  
-          />
-        </div>
-      ))}
-    </Slider>
+  <div className="w-10/12 mx-auto mt-4 max-h-[40vh] overflow-hidden flex justify-center items-center"> {/* Added flexbox centering */}
+    {selectedProject.images.length > 1 ? (
+      <Slider {...settingsMore}>
+        {selectedProject.images.map((image, index) => (
+          <div key={index} className="flex items-center justify-center">
+            <img
+              src={image}
+              alt={`${selectedProject.name} Image ${index + 1}`}
+              className="object-contain w-full max-w-[85%] max-h-[35vh]"
+            />
+          </div>
+        ))}
+      </Slider>
+    ) : (
+      <div className="flex items-center justify-center">
+        <img
+          src={selectedProject.images[0]}
+          alt={`${selectedProject.name} Image`}
+          className="object-contain w-full max-w-[85%] max-h-[35vh]"
+        />
+      </div>
+    )}
   </div>
 </div>
+
+
+
 
 
 
