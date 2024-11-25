@@ -9,6 +9,9 @@ import VillaConstruction from "./components/Construction/Villa_Construction/Vill
 import CabanaConstruction from "./components/Construction/Cabana_Construction/Cabana_Construction";
 import LandscapeConstruction from "./components/Construction/Landscape_Construction/Landscape_Construction";
 import ContactUs_1 from "./components/ContactUs/ContactUs_1";
+import Villa_Construction_Home from "./components/Construction/Villa_Construction_Home/Villa_Construction_Home";
+import Cabana_Construction_Home from "./components/Construction/Cabana_Construction_Home/Cabana_Construction_Home";
+import Home_Construction_Home from "./components/Construction/Home_Construction_Home/Home_Construction_Home";
 
 
 function App() {
@@ -25,6 +28,10 @@ function App() {
         <Route path="/landscapeConstruction" element={<LandscapeConstruction />} />
         <Route path="/landscapeConstruction" element={<LandscapeConstruction />} />
         <Route path="/contactUs_1" element={<ContactUs_1 />} />
+        <Route path="/Villa_Construction_Home" element={<Villa_Construction_Home />} />
+        <Route path="/Cabana_Construction_Home" element={<Cabana_Construction_Home />} />
+        <Route path="/Home_Construction_Home" element={<Home_Construction_Home />} />
+
 
 
 

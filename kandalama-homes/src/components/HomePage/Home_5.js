@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
+
 
 // Projects data
 const projects = [
@@ -89,6 +91,8 @@ const ProjectCard = ({ project, index, isMobile }) => {
 
   const textClasses = 'text-center text-white font-poppins p-4 flex-grow';
 
+  const projectUrl = `/${project.title.replace(/\s+/g, '_')}_Construction_Home`;
+
   return (
     <motion.div
       ref={ref}
@@ -97,15 +101,17 @@ const ProjectCard = ({ project, index, isMobile }) => {
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
       transition={{ delay: index * 0.2, duration: 1 }}
     >
-      <div className="w-full">
-        <img src={project.image} alt={project.title} className={imageClasses} />
-        <div className="left-0 w-2/5 p-2 transform -translate-y-1/2 bg-white rounded-r-md">
-          <h3 className="text-2xl text-customGreen font-prata">{project.title}</h3>
+      {/* Make the entire card clickable using Link */}
+      <Link to={projectUrl} className="w-full">
+        <div className="w-full">
+          <img src={project.image} alt={project.title} className={imageClasses} />
+          <div className="left-0 w-2/5 p-2 transform -translate-y-1/2 bg-white rounded-r-md">
+            <h3 className="text-2xl text-customGreen font-prata">{project.title}</h3>
+          </div>
         </div>
-      </div>
-      <p className={textClasses}>{project.description}</p>
+        <p className={textClasses}>{project.description}</p>
+      </Link>
     </motion.div>
   );
 };
-
 export default OurProjects;
