@@ -92,7 +92,7 @@ const TeamSection = () => {
 
 
 {/* Desktop view: Show grid */}
-<div className="hidden gap-8 ml-20 mr-20 rid-cols-1 h lg:grid lg:grid-cols-3 ">
+<div className="hidden gap-8 ml-10 mr-10 rid-cols-1 h lg:grid lg:grid-cols-3 ">
   {services.map((service, index) => (
     <motion.div
       key={index}
