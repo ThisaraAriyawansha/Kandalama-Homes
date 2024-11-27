@@ -46,7 +46,7 @@ const TeamSection = () => {
 
   return (
     <div
-    className="bg-center bg-cover border-4 border-white rounded-[47px] sm:h-[75vh] md:h-[100vh] h-[85vh]"
+    className="bg-center bg-full border-4 border-white rounded-[47px] sm:h-full md:h-full h-[85vh]"
     style={{
         backgroundImage:
           "url('/images/Rectangle 7.jpg')",
@@ -59,7 +59,7 @@ const TeamSection = () => {
           </h2>
 
           {/* Mobile view: Show slider */}
-          <div className="md:hidden">
+          <div className="md:hidden sm:hidden">
       <Slider {...settings}>
         {services.map((service, index) => (
           <div
@@ -92,30 +92,35 @@ const TeamSection = () => {
 
 
 {/* Desktop view: Show grid */}
-<div className="hidden grid-cols-1 gap-8 ml-20 mr-20 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-  {services.slice(0, 3).map((service, index) => (
+<div className="hidden sm:grid grid-flow-col sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-cols-[minmax(150px, 25%)] gap-[2%] px-[5%] overflow-hidden max-w-full ">
+  {services.map((service, index) => (
     <motion.div
       key={index}
-      className="relative p-6 transition-shadow duration-300 rounded-lg shadow-sm hover:shadow-md h-[75vh]" // Use percentage for height
+      className="relative p-[2%] transition-shadow duration-300 rounded-[5%] shadow-sm hover:shadow-md h-[70vh] flex-shrink-0 w-[90%]" // Reduced width to 90%
       whileHover={{ scale: 1.05 }}
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.8 }}
-      onClick={() => handleCardClick(service.title)} // Handle click
+      onClick={() => handleCardClick(service.title)}
     >
-      <div className="border-4 border-white rounded-[1rem] h-full"> {/* Use rem for rounded corners */}
+      <div className="h-full ">
         <img
           src={service.image}
           alt={service.title}
-          className="object-cover w-full h-full rounded-[1rem]" // Use rem for rounded corners
+          className="object-cover w-full h-full rounded-[5%] border-[5px] border-white" // Border for image
         />
       </div>
-      <div className="absolute w-[75%] px-[1rem] py-[0.5rem] transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-md bg-opacity-50 top-1/2 left-1/2 backdrop-blur-md">
-        <h3 className="text-xl text-white sm:text-2xl font-sansita">{service.title}</h3>
+      <div className="absolute w-[75%] px-[5%] py-[2%] transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-[5%] bg-opacity-50 top-[50%] left-[50%] backdrop-blur-md">
+        <h3 className="text-[120%] text-white font-sansita">{service.title}</h3>
       </div>
     </motion.div>
   ))}
 </div>
+
+
+
+
+
 
 
 
