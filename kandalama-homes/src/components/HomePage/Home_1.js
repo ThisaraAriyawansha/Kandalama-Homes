@@ -15,7 +15,7 @@ const KandalamaHomes = () => {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden text-white bg-white border-4 border-white sm:h-screen rounded-[47px]">
+    <div className="min-h-screen overflow-hidden text-white bg-white border-4 border-white sm:h-screen sm:rounded-[47px]">
       {/* Hero Section */}
       <section className="relative flex items-center justify-center w-full h-screen">
         {/* Background Image */}
