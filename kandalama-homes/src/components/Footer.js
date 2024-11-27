@@ -14,7 +14,7 @@ const Footer = () => {
             />
           </div>
 
-          <div className="mb-6 text-center sm:mb-0 sm:text-left">
+          <div className="mb-6 text-left sm:mb-0 sm:text-left">
             <p className="text-sm leading-loose font-poppins">
               Construction site is a bustling environment where buildings, roads,
               or other infrastructure projects come to life. It is filled with the sights
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="flex-1 mb-6 text-center sm:mb-0 sm:text-left">
+          <div className="flex-1 mb-6 text-left sm:mb-0 sm:text-left">
             <h4 className="mb-4 text-lg font-poppins">QUICK LINKS</h4>
             <ul className="space-y-2 text-sm leading-relaxed font-poppins">
               <li>
