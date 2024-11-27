@@ -46,7 +46,7 @@ const TeamSection = () => {
 
   return (
     <div
-    className="bg-center bg-full border-4 border-white rounded-[47px] sm:h-full md:h-full h-[85vh]"
+    className="bg-center bg-full border-4 border-white rounded-[47px] sm:h-full md:h-full h-[85vh] lg:h-full"
     style={{
         backgroundImage:
           "url('/images/Rectangle 7.jpg')",
