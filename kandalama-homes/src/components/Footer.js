@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 space-x-6 sm:flex-row sm:items-start sm:justify-between">
           {/* Logo and Description */}
-          <div className="flex flex-col items-center w-full mb-6 sm:items-start sm:mb-0">
+          <div className="flex flex-col items-center w-full h-auto mb-6 sm:items-start sm:mb-0 lg:w-full lg-h-auto md:w-full md:h-auto sm:w-full sm:h-auto">
             <img
               src="/images/414004164_377982111404002_5386038758596751474_n 1.jpg"
               alt="Company Logo"
-              className="w-full sm:w-96 sm:h-60" // Full width on mobile, fixed size on desktop
+              className="w-full h-auto sm:w-full sm:h-auto lg:w-full lg-h-auto md:w-full md:h-auto " 
             />
           </div>
 
@@ -33,28 +33,28 @@ const Footer = () => {
             <h4 className="mb-4 text-lg font-poppins">QUICK LINKS</h4>
             <ul className="space-y-2 text-sm leading-relaxed font-poppins">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Features
+                <a href="/services" className="hover:underline">
+                Services
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Pricings
+                <a href="/about" className="hover:underline">
+                About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  FAQs
+                <a href="/projects" className="hover:underline">
+                Projects
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  About
+                <a href="/contact" className="hover:underline">
+                Contact
                 </a>
               </li>
             </ul>
