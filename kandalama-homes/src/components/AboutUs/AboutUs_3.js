@@ -55,7 +55,7 @@ const TeamSection = () => {
 
 
           {/* Mobile view: Show slider */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Slider {...settings}>
             {teamMembers.map((member, index) => (
   <div
@@ -80,7 +80,7 @@ const TeamSection = () => {
           </div>
 
           {/* Desktop view: Show grid */}
-          <div className="hidden grid-cols-1 gap-8 ml-20 mr-20 md:grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
+          <div className="hidden grid-cols-1 gap-8 ml-20 mr-20 lg:grid md:grid-cols-4 lg:grid-cols-4">
       {teamMembers.map((member, index) => (
         <motion.div
           key={index}
@@ -95,7 +95,7 @@ const TeamSection = () => {
             alt={member.role}
             className="object-cover w-full h-auto rounded-none"
           />
-          <h3 className="mt-4 text-xl text-black font-prata">{member.name}</h3>
+          <h3 className="mt-4 text-xl text-black font-prata ">{member.name}</h3>
           <p className="text-customGreen font-prata">{member.role}</p>
         </motion.div>
       ))}
