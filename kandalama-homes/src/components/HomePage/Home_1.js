@@ -37,7 +37,7 @@ const KandalamaHomes = () => {
             >
               A construction site thumbnail could feature a busy worksite with cranes, workers in safety
               <br />
-              gear, and partially built structures. Workers in safety gear, and partially built structures.
+              gear, and partially built structures.
             </motion.p>
           )}
 
@@ -71,7 +71,7 @@ const KandalamaHomes = () => {
               <p className="absolute top-[50%] left-[10%] transform -translate-y-50 font-light text-white text-lg leading-relaxed z-20 w-[80%]">
                 A construction site thumbnail could feature a busy worksite with cranes, workers in safety
                 <br />
-                gear, and partially built structures. Workers in safety gear, and partially built structures.
+                gear, and partially built structures. 
               </p>
               <h1 className="absolute top-[60%] left-[10%] text-[8vw] font-milonga font-[400] tracking-wide text-shadow-xl z-20">
                 Kandalama
