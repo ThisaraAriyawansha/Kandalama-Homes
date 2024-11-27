@@ -89,7 +89,7 @@ const ProjectCard = ({ project, index, isMobile }) => {
     ? 'object-contain w-full max-h-60 transition-transform duration-300 group-hover:scale-105'
     : 'object-cover w-full h-60 transition-transform duration-300 group-hover:scale-105';
 
-  const textClasses = 'text-center text-white font-poppins p-4 flex-grow';
+  const textClasses = 'text-center text-white font-poppins p-0 flex-grow';
 
   const projectUrl = `/${project.title.replace(/\s+/g, '_')}_Construction_Home`;
 
