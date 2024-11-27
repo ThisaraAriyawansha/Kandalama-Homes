@@ -51,6 +51,7 @@
       top: 50%;  /* Reduced gap by adjusting 'top' */
       left: 50%;
       transform: translateX(-50%);
+      font-size: 0.8rem;
     }
   
     .font-milonga {
@@ -59,15 +60,15 @@
       top: 65%;  /* Reduced gap between title and subtitle */
       left: 50%;
       transform: translateX(-50%);
-      font-size: 60px; /* Adjust font size for mobile */
+      font-size: 4rem; /* Adjust font size for mobile */
     }
   
     .font-megrim {
       text-align: right;
       position: absolute;
-      top: 75%;  /* Adjusted for tighter alignment */
+      top: 79%;  /* Adjusted for tighter alignment */
       right: 20px;
-      font-size: 50px; /* Adjust font size for mobile */
+      font-size: 3rem; /* Adjust font size for mobile */
       width: auto;
     }
   
@@ -82,4 +83,24 @@
 
   }
   
+  
+
+
+  /* Mobile Version - Responsive Styles */
+  @media screen and (max-width: 1024px) {
+
+  
+    /* Description and Main Title Center Align */
+    .font-light {
+      position: absolute;
+      top: 50%;  /* Reduced gap by adjusting 'top' */
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+    }
+
+
+  }
+  
+  
+
   
