@@ -15,14 +15,14 @@ const KandalamaHomes = () => {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden text-white bg-white border-4 border-white sm:h-full">
+    <div className="min-h-screen overflow-hidden text-white bg-white border-4 border-white sm:h-screen rounded-[47px]">
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center w-full h-full">
+      <section className="relative flex items-center justify-center w-full h-screen">
         {/* Background Image */}
         <img
           src="/images/Rectangle 1.png"
           alt="Kandalama Homes"
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-screen"
         />
 
         {/* Overlay */}
@@ -30,7 +30,7 @@ const KandalamaHomes = () => {
           {/* Description Text */}
           {isDesktop && (
             <motion.p
-              className="absolute top-[60%] left-[8%] transform -translate-y-50 font-light text-white text-lg leading-relaxed z-20 w-[80%]"
+              className="absolute top-[50%] left-[8%] transform -translate-y-50 font-light text-white text-lg leading-relaxed z-20 w-[80%]"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -44,7 +44,7 @@ const KandalamaHomes = () => {
           {/* Main Title */}
           {isDesktop && (
             <motion.h1
-              className="absolute top-[68%] left-[8%] text-[8vw] font-milonga font-[400] tracking-wide text-shadow-xl z-20"
+              className="absolute top-[58%] left-[8%] text-[8vw] font-milonga font-[400] tracking-wide text-shadow-xl z-20"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 1.2 }}
@@ -56,7 +56,7 @@ const KandalamaHomes = () => {
           {/* Subtitle */}
           {isDesktop && (
             <motion.h2
-              className="absolute top-[85%] left-[8%] text-[6vw] font-megrim font-[500] leading-tight text-shadow-xl z-30"
+              className="absolute top-[78%] left-[8%] text-[6vw] font-megrim font-[500] leading-tight text-shadow-xl z-30"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.5, duration: 1.2 }}
