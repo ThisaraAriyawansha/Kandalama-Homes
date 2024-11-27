@@ -30,7 +30,7 @@ const KandalamaHomes = () => {
           {/* Description Text */}
           {isDesktop && (
             <motion.p
-              className="absolute top-[50%] left-[8%] transform -translate-y-50 font-light text-white text-lg leading-relaxed z-20 w-[80%]"
+              className="absolute top-[45%] left-[8%] transform -translate-y-50 font-light text-white text-lg leading-relaxed z-20 w-[80%]"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -44,7 +44,7 @@ const KandalamaHomes = () => {
           {/* Main Title */}
           {isDesktop && (
             <motion.h1
-              className="absolute top-[58%] left-[8%] text-[8vw] font-milonga font-[400] tracking-wide text-shadow-xl z-20"
+              className="absolute top-[55%] left-[8%] text-[8vw] font-milonga font-[400] tracking-wide text-shadow-xl z-20"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 1.2 }}
