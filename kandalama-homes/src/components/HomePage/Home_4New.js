@@ -59,7 +59,7 @@ const TeamSection = () => {
           </h2>
 
           {/* Mobile view: Show slider */}
-          <div className="md:hidden sm:hidden">
+          <div className="lg:hidden">
       <Slider {...settings}>
         {services.map((service, index) => (
           <div
@@ -92,7 +92,7 @@ const TeamSection = () => {
 
 
 {/* Desktop view: Show grid */}
-<div className="hidden sm:grid grid-flow-col sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-cols-[minmax(150px, 25%)] gap-[2%] px-[5%] overflow-hidden max-w-full ">
+<div className="hidden gap-8 ml-20 mr-20 rid-cols-1 h lg:grid lg:grid-cols-3 ">
   {services.map((service, index) => (
     <motion.div
       key={index}
