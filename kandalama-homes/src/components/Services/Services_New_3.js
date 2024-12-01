@@ -134,7 +134,7 @@ function KandalamaHomes() {
             <motion.button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`mx-6 w-2 h-2 rounded-full transition-all duration-200 ${
+              className={`mx-6 w-3 h-3 rounded-full transition-all duration-200 ${
                 activeTab === tab
                   ? "bg-green-800"
                   : "bg-gray-400 hover:bg-green-600"
