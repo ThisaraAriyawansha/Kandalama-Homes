@@ -12,7 +12,7 @@ import ContactUs_1 from "./components/ContactUs/ContactUs_1";
 import Villa_Construction_Home from "./components/Construction/Villa_Construction_Home/Villa_Construction_Home";
 import Cabana_Construction_Home from "./components/Construction/Cabana_Construction_Home/Cabana_Construction_Home";
 import Home_Construction_Home from "./components/Construction/Home_Construction_Home/Home_Construction_Home";
-import Services from "./components/Services/Services";
+import Services from "./components/Services/Services_New";
 
 function App() {
   return (
