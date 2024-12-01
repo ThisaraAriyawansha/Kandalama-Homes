@@ -8,13 +8,13 @@ function KandalamaHomes() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="flex flex-col min-h-screen p-20 mt-10 text-center bg-white sm:text-left sm:mt-0"
+      className="flex flex-col p-10 text-center bg-white sm:p-20 sm:text-left sm:mt-0"
     >
       <motion.h1
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mb-8 text-lg font-medium text-center text-black sm:text-xl sm:text-left font-poppins"
+        className="mb-4 text-lg font-medium text-center text-black sm:text-xl sm:text-left font-poppins"
       >
         Building Your Vision with
       </motion.h1>
@@ -22,7 +22,7 @@ function KandalamaHomes() {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="mb-10 text-4xl text-center text-black sm:text-7xl sm:text-left font-prata"
+        className="mb-6 text-4xl text-center text-black sm:text-7xl sm:text-left font-prata"
       >
         Kandalama Homes
       </motion.h2>
@@ -30,7 +30,7 @@ function KandalamaHomes() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="ml-10 mr-10 text-sm leading-relaxed text-center text-black sm:text-lg max-w-7xl sm:text-left font-poppins sm:ml-0 sm:mr-0"
+        className="text-sm leading-relaxed text-center text-black  sm:text-lg max-w-7xl sm:text-left font-poppins"
       >
         At Kandalama Homes, we bring dreams to life with our unparalleled expertise and dedication to
         excellence. Whether it’s a home that reflects your personality, a cabaña that offers
