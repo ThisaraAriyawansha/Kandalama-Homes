@@ -30,7 +30,7 @@ function KandalamaHomes() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-sm leading-relaxed text-center text-black sm:text-lg max-w-7xl sm:text-left font-poppins"
+        className="text-sm leading-relaxed text-justify text-black sm:text-lg max-w-7xl font-poppins"
       >
         At Kandalama Homes, we bring dreams to life with our unparalleled expertise and dedication to
         excellence. Whether it’s a home that reflects your personality, a cabaña that offers

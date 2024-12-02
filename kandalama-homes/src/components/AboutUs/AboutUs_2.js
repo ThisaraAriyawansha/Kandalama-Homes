@@ -27,8 +27,12 @@ const OurHistory = () => {
             <h3 className="mb-4 text-xl text-center font-prata sm:text-left sm:text-2xl">
                 WHO WE ARE
             </h3>
-            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-center sm:text-left sm:text-base leading-normal">
-            Kandalama Homes was founded with a vision to redefine construction and landscape architecture in Sri Lanka. From humble beginnings, we have grown into a trusted name, known for delivering exceptional projects that blend creativity, functionality, and sustainability. With years of experience and a passion for excellence, our journey has been marked by countless success stories and lasting relationships with our clients. At Kandalama Homes, our history is built on a foundation of trust, innovation, and a commitment to creating spaces that stand the test of time
+            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-justify sm:text-base leading-normal">
+            Kandalama Homes was founded with a vision to redefine construction and landscape architecture in Sri Lanka. From humble
+             beginnings, we have grown into a trusted name, known for delivering exceptional projects that blend creativity,
+              functionality, and sustainability. With years of experience and a passion for excellence, our journey has been 
+              marked by countless success stories and lasting relationships with our clients. At Kandalama Homes, our history 
+              is built on a foundation of trust, innovation, and a commitment to creating spaces that stand the test of time
             </p>
 
             </motion.div>

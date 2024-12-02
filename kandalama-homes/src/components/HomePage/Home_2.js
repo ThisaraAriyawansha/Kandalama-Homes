@@ -34,7 +34,7 @@ const AboutUs = () => {
 </h2>
 
 
-        <p className="text-[14px] sm:text-[16px] font-poppins font-[300] leading-[40px] text-black">
+        <p className="text-[12px] sm:text-[16px] font-poppins font-[300] leading-[40px] text-black text-justify">
         Welcome to Kandalama Homes, your trusted partner in building dreams and creating exceptional living spaces in Sri Lanka. With a passion for excellence and a commitment to quality, we specialize in landscape architecture and construction that blends innovation with timeless design. At Kandalama Homes, we take pride in transforming visions into reality, delivering tailor-made solutions that reflect your unique style and needs. Our expert team ensures every project is crafted with precision, sustainability, and a dedication to enhancing the natural beauty of our island home. Discover the art of construction with Kandalama Homes – where your dream home begins.
         </p>
       </motion.div>

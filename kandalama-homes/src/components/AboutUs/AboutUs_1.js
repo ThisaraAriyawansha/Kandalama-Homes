@@ -51,7 +51,7 @@ const AboutUs = () => {
 >
   <div className="text-left">
     <p
-      className="text-[clamp(0.875rem, 2.5vw, 1.25rem)] leading-[clamp(1.25rem, 3vw, 2rem)] md:leading-8"
+      className="text-[clamp(0.875rem, 2.5vw, 1.25rem)] leading-[clamp(1.25rem, 3vw, 2rem)] md:leading-8 text-justify"
     >
       Welcome to Kandalama Homes, your trusted partner in building dreams and
       creating exceptional living spaces in Sri Lanka. With a passion for excellence
