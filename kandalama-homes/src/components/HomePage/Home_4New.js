@@ -69,37 +69,38 @@ const TeamSection = () => {
     >
       <div className="w-full h-full rounded-[47px] " style={{ backgroundColor: "rgba(0, 90, 78, 0.49)" }}>
         <div className="container p-20 mx-auto text-center text-white">
-          <h2 className="mb-4 text-2xl font-bold text-center sm:text-left sm:text-4xl font-quando">
+          <h2 className="mb-4 text-2xl font-bold text-center lg:text-left sm:text-4xl font-quando">
           OUR SERVICES
           </h2>
 
+
           {/* Mobile view: Show slider */}
           <div className="lg:hidden">
-      <Slider {...settings}>
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[50vh]"
-            onClick={() => handleCardClick(service.title)}  // Add onClick to trigger navigation
-          >
-            <div className="flex justify-center mb-6" style={{ height: "40vh" }}>
-              <img
-                src={service.image}
-                alt={service.title}
-                className="object-cover w-[80vw] h-[60vh] border-4 border-white rounded-[5%]"
-              />
-            </div>
+  <Slider {...settings}>
+    {services.map((service, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[40vh]"
+        onClick={() => handleCardClick(service.title)}
+      >
+        <div className="relative flex justify-center mb-6" style={{ height: "40vh" }}> {/* Make parent relative */}
+          <img
+            src={service.image}
+            alt={service.title}
+            className="object-cover w-[80vw] h-[40vh] border-4 border-white rounded-[5%]"
+          />
+          {/* Title positioned at the center of the image */}
+          <h3 className="absolute inset-0 flex items-center justify-center text-sm text-center text-white sm:text-xl font-sansita">
+            <span className="p-1 bg-opacity-50 rounded-lg bg-gray backdrop-blur-md">
+              {service.title}
+            </span>
+          </h3>
+        </div>
+      </div>
+    ))}
+  </Slider>
+</div>
 
-            {/* Title with small blurred background */}
-            <h3 className="relative mt-4 text-lg text-center text-white sm:mt-6 sm:text-xl font-sansita">
-              <span className="absolute p-1 bg-black bg-opacity-50 rounded-lg backdrop-blur-md ">
-                {service.title}
-              </span>
-            </h3>
-          </div>
-        ))}
-      </Slider>
-    </div>
 
 
 
