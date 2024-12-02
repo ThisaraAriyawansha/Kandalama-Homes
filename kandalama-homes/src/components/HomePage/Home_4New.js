@@ -80,17 +80,17 @@ const TeamSection = () => {
     {services.map((service, index) => (
       <div
         key={index}
-        className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[40vh]"
+        className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[30vh]" // Reduced height
         onClick={() => handleCardClick(service.title)}
       >
-        <div className="relative flex justify-center mb-6" style={{ height: "40vh" }}> {/* Make parent relative */}
+        <div className="relative flex justify-center mb-4" style={{ height: "30vh" }}> {/* Reduced height */}
           <img
             src={service.image}
             alt={service.title}
-            className="object-cover w-[80vw] h-[40vh] border-4 border-white rounded-[5%]"
+            className="object-cover w-[80vw] h-[30vh] border-4 border-white rounded-[5%]" // Reduced image height
           />
           {/* Title positioned at the center of the image */}
-          <h3 className="absolute inset-0 flex items-center justify-center text-sm text-center text-white sm:text-xl font-sansita">
+          <h3 className="absolute inset-0 flex items-center justify-center text-xs text-center text-white sm:text-lg font-sansita"> {/* Smaller font */}
             <span className="p-1 bg-opacity-50 rounded-lg bg-gray backdrop-blur-md">
               {service.title}
             </span>
@@ -100,6 +100,7 @@ const TeamSection = () => {
     ))}
   </Slider>
 </div>
+
 
 
 
