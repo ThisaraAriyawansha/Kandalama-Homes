@@ -81,7 +81,9 @@ const projects = [
   {
     name: "H.G Kanishkarandi",
     images: [
-      "/images/a938a712a5397c41bbddbd2a80bed293.jpeg"
+      "/images/a938a712a5397c41bbddbd2a80bed293.jpeg",
+      "/images/Rectangle 66.jpg",
+      "/images/Rectangle 67.jpg",
     ]
   }
 ];
