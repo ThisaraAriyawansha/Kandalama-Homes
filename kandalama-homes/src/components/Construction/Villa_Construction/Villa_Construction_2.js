@@ -9,7 +9,7 @@ const VillaSection = () => {
         <h2 className="mb-8 text-xl text-center font-poppins text-customGreen sm:text-left sm:text-3xl">
           Why Build a Villa in Sri Lanka?
         </h2>
-        <div className="grid gap-8 mx-auto sm:grid-cols-1 md:grid-cols-3">
+        <div className="grid gap-8 mx-auto md:grid-cols-1 lg:grid-cols-3">
           {/* Tropical Paradise */}
           <motion.div
             className="text-center"
@@ -20,7 +20,7 @@ const VillaSection = () => {
             <div className="p-2 rounded-md mx-auto w-[90%] sm:w-[18rem] md:w-[19rem] bg-[#005A4E26]">
               <h3 className="text-lg text-black font-poppins">Tropical Paradise</h3>
             </div>
-            <p className="text-center sm:text-left text-black font-poppins w-[90%] sm:w-[18rem] md:w-[19rem] mx-auto mt-4">
+            <p className="  text-black font-poppins w-[90%] sm:w-[18rem] md:w-[19rem] mx-auto mt-4 text-justify">
               Year-round warm weather and stunning landscapes make Sri Lanka a haven for villa living.
             </p>
           </motion.div>
@@ -35,7 +35,7 @@ const VillaSection = () => {
             <div className="p-2 rounded-md mx-auto w-[90%] sm:w-[18rem] md:w-[19rem] bg-[#005A4E26]">
               <h3 className="text-lg text-black font-poppins">Tourism Potential</h3>
             </div>
-            <p className="text-center sm:text-left text-black font-poppins w-[90%] sm:w-[18rem] md:w-[19rem] mx-auto mt-4">
+            <p className="text-justify  text-black font-poppins w-[90%] sm:w-[18rem] md:w-[19rem] mx-auto mt-4">
               A villa can double as a private residence and a lucrative rental property, catering to the country's growing tourism industry.
             </p>
           </motion.div>
@@ -50,7 +50,7 @@ const VillaSection = () => {
             <div className="p-2 rounded-md mx-auto w-[90%] sm:w-[18rem] md:w-[19rem] bg-[#005A4E26]">
               <h3 className="text-lg text-black font-poppins">Cultural Richness</h3>
             </div>
-            <p className="text-center sm:text-left text-black font-poppins w-[90%] sm:w-[18rem] md:w-[19rem] mx-auto mt-4">
+            <p className="text-justify text-black font-poppins w-[90%] sm:w-[18rem] md:w-[19rem] mx-auto mt-4">
               Sri Lanka's rich history and welcoming culture create an enriching environment for living or visiting.
             </p>
           </motion.div>

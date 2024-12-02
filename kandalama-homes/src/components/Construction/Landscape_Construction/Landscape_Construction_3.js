@@ -18,7 +18,7 @@ const VisionSection = () => {
 
         {/* Paragraph with a fade-in effect and gentle sliding */}
         <motion.p
-          className="mb-6 text-base sm:text-lg italic text-black font-prata leading-[2] sm:leading-[3]"
+          className="mb-6 text-base sm:text-lg italic text-black font-prata leading-[2] sm:leading-[3] text-justify p-4 lg:p-0"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}

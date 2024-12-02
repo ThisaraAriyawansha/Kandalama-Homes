@@ -39,7 +39,7 @@ const Villa_1 = () => {
          
  {/* Desktop view: Show grid */}
       {/* Image Section */}
-      <div className="hidden grid-cols-1 gap-1 p-10 md:grid mr-36 ml-36 md:grid-cols-3 md:px-8">
+      <div className="hidden grid-cols-1 gap-1 p-10 lg:grid mr-36 ml-36 lg:grid-cols-3 lg:px-8">
   {images.map((image, index) => (
     <motion.div
       key={index}
@@ -64,7 +64,7 @@ const Villa_1 = () => {
 
 
 {/* Mobile view: Show slider */}
-<div className="px-4 py-10 mx-auto md:hidden max-w-[19rem]">
+<div className="px-4 py-10 mx-auto lg:hidden max-w-[19rem]">
   <Slider {...settings}>
     {images.map((image, index) => (
       <motion.div
@@ -90,7 +90,7 @@ const Villa_1 = () => {
 
     </motion.div>
     <motion.p
-  className="p-20 text-sm text-center text-black sm:text-left sm:text-lg font-poppins"
+  className="p-10 text-base text-justify text-black sm:p-20 sm:text-lg font-poppins"
   initial={{ opacity: 0, y: 50 }} // Initial state: invisible and slightly below
   whileInView={{ opacity: 1, y: 0 }} // On view: fully visible and at normal position
   viewport={{ once: true }} // Animation plays only once when the element comes into view
