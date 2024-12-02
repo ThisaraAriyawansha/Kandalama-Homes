@@ -4,20 +4,35 @@ import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination,Autoplay  } from 'swiper/modules';
+
+import "./Home_4.css";
 
 
 const services = [
   {
-    title: "Villa Construction",
+    title: "Housing Constructions",
     image: "/images/29450b5e5710977a15d5fc7ebf25b25d.jpeg",
   },
   {
-    title: "Cabana Design",
-    image: "/images/Rectangle 12.jpg",
+    title: "Villa Construction",
+    image: "/images/Rectangle 48.jpg",
+  },
+  {
+    title: "Cabana Construction",
+    image: "/images/Rectangle 88.jpg",
   },
   {
     title: "Landscape Architecture",
     image: "/images/Rectangle 12 (1).jpg",
+  },
+  {
+    title: "Warehouse Construction",
+    image: "/images/Rectangle 88 (1).jpg",
   },
 ];
 
@@ -37,7 +52,7 @@ const TeamSection = () => {
   const handleCardClick = (title) => {
     if (title === 'Villa Construction') {
       navigate('/villaConstruction');
-    } else if (title === 'Cabana Design') {
+    } else if (title === 'Cabana Construction') {
       navigate('/cabanaConstruction');
     } else if (title === 'Landscape Architecture') {
       navigate('/landscapeConstruction');
@@ -92,30 +107,57 @@ const TeamSection = () => {
 
 
 {/* Desktop view: Show grid */}
-<div className="hidden gap-8 ml-10 mr-10 rid-cols-1 h lg:grid lg:grid-cols-3 ">
-  {services.map((service, index) => (
-    <motion.div
-      key={index}
-      className="relative p-[2%] transition-shadow duration-300 rounded-[5%] shadow-sm hover:shadow-md h-[70vh] flex-shrink-0 w-[90%]" // Reduced width to 90%
-      whileHover={{ scale: 1.05 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.8 }}
-      onClick={() => handleCardClick(service.title)}
-    >
-      <div className="h-full ">
-        <img
-          src={service.image}
-          alt={service.title}
-          className="object-cover w-full h-full rounded-[5%] border-[5px] border-white" // Border for image
-        />
-      </div>
-      <div className="absolute w-[75%] px-[5%] py-[2%] transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-[5%] bg-opacity-50 top-[50%] left-[50%] backdrop-blur-md">
-        <h3 className="text-[120%] text-white font-sansita">{service.title}</h3>
-      </div>
-    </motion.div>
-  ))}
+<div className="hidden lg:block">
+  <Swiper
+    slidesPerView={3}
+    spaceBetween={30}
+    pagination={{
+      clickable: true,
+      renderBullet: (index, className) =>
+        `<span class="${className} custom-bullet"></span>`, // Add a custom class for styling
+    }}
+    autoplay={{
+      delay: 5000, // Auto-slide delay in milliseconds (20 seconds)
+      disableOnInteraction: false, // Ensure auto-sliding continues after user interaction
+    }}
+    loop={true} // Make the slides loop smoothly
+    speed={5000} // Increase the speed for smoother transitions (1000ms = 1 second)
+    effect="slide" // Use the 'slide' effect for a smoother transition
+    slidesPerGroup={1} // Ensure only 1 slide moves at a time for smoother effect
+    modules={[Pagination, Autoplay]} // Include the Autoplay and Pagination modules
+    className="service-slider"
+  >
+    {services.map((service, index) => (
+      <SwiperSlide key={index}>
+        <motion.div
+          className="relative p-[2%] transition-shadow duration-300 rounded-[5%] shadow-sm hover:shadow-md h-[70vh] flex-shrink-0 w-[90%]"
+          whileHover={{ scale: 1.05 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
+          onClick={() => handleCardClick(service.title)}
+        >
+          <div className="h-full">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="object-cover w-full h-full rounded-[5%] border-[5px] border-white"
+            />
+          </div>
+          <div className="absolute w-[75%] px-[5%] py-[2%] transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-[5%] bg-opacity-50 top-[50%] left-[50%] backdrop-blur-md">
+            <h3 className="text-[120%] text-white font-sansita">{service.title}</h3>
+          </div>
+        </motion.div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
 </div>
+
+
+
+
+
+
 
 
 
