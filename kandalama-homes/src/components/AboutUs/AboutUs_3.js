@@ -37,18 +37,18 @@ const TeamSection = () => {
 
   return (
     <div
-      className="bg-center bg-cover"
+      className="h-auto bg-center bg-cover"
       style={{
         backgroundImage:
           "url('/images/Rectangle 35.jpg')",
       }}
     >
-      <div className="w-full min-h-screen" style={{ background: "#000000B8" }}>
-        <div className="container p-20 mx-auto text-center text-white">
+      <div className="w-full " style={{ background: "#000000B8" }}>
+        <div className="container p-10 mx-auto text-center text-white sm:p-20">
         <h2 className="mb-4 text-2xl text-center sm:text-left sm:text-4xl font-prata">
   Meet Our Team
 </h2>
-<p className="mb-8 text-base text-center sm:text-lg sm:text-left font-poppins">
+<p className="mb-8 text-base text-justify sm:text-lg font-poppins">
   We are a team of dedicated professionals committed to delivering high-quality construction and design services. Our mission is to provide innovative and reliable solutions that exceed our clients' expectations. With years of experience in the industry, we take pride in our craftsmanship and attention to detail, ensuring that every project we undertake is completed to the highest standards.
 </p>
 
@@ -73,11 +73,11 @@ const TeamSection = () => {
     <p className="text-sm text-center font-prata text-customGreen sm:text-base">{member.role}</p> {/* Centered role */}
   </div>
 ))}
-
-
-
             </Slider>
           </div>
+
+
+
 
           {/* Desktop view: Show grid */}
           <div className="hidden grid-cols-1 gap-8 ml-20 mr-20 lg:grid md:grid-cols-4 lg:grid-cols-4">

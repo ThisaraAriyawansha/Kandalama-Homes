@@ -40,7 +40,7 @@ function KandalamaHomes() {
       </motion.h2>
 
       <motion.p 
-        className="text-sm leading-relaxed text-center text-black sm:text-xl max-w-7xl sm:text-left font-poppins"
+        className="text-sm leading-relaxed text-justify text-black sm:text-xl max-w-7xl font-poppins"
         initial={{ x: 50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ 

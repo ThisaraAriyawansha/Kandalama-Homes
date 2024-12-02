@@ -94,7 +94,7 @@ function KandalamaHomes() {
                 {tabContent[activeTab].title}
               </motion.h2>
               <motion.p
-                className="text-xs leading-relaxed text-center text-black sm:text-base font-poppins sm:text-left"
+                className="text-xs leading-relaxed text-justify text-black sm:text-base font-poppins"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}

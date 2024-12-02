@@ -52,8 +52,10 @@ const OurProjects = () => {
     <section className="py-16 bg-gray-100">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <h2 className="mb-8 text-4xl font-bold text-center text-gray-800 font-quando">OUR PROJECTS</h2>
-        <p className="mb-12 text-center text-black font-poppins">
-        At Kandalama Homes, every project is a testament to our dedication to quality, innovation, and craftsmanship. Our portfolio showcases a diverse range of construction and landscape architecture endeavors, from bespoke residential spaces to sustainable outdoor environments that harmonize with nature. Each project reflects our commitment to meeting our clients’ aspirations while ensuring the highest standards of design and functionality. With an unwavering focus on detail and a passion for excellence, Kandalama Homes transforms ideas into remarkable spaces that inspire and endure.         </p>
+        <p className="mb-6 sm:mb-12 text-justify text-black font-poppins text-[14px] sm:text-[16px] leading-[22px] sm:leading-[28px]">
+          At Kandalama Homes, every project is a testament to our dedication to quality, innovation, and craftsmanship. Our portfolio showcases a diverse range of construction and landscape architecture endeavors, from bespoke residential spaces to sustainable outdoor environments that harmonize with nature. Each project reflects our commitment to meeting our clients’ aspirations while ensuring the highest standards of design and functionality. With an unwavering focus on detail and a passion for excellence, Kandalama Homes transforms ideas into remarkable spaces that inspire and endure.       
+        </p>
+
 
         {/* Desktop Grid */}
         <div className="hidden grid-cols-1 gap-8 md:grid md:grid-cols-3">

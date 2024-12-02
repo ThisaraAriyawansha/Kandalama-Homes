@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
 
           <div className="mb-6 text-left sm:mb-0 sm:text-left">
-            <p className="text-sm leading-loose font-poppins">
+            <p className="mr-3 text-sm leading-loose text-justify font-poppins sm:mr-0">
               Construction site is a bustling environment where buildings, roads,
               or other infrastructure projects come to life. It is filled with the sights
               and sounds of progress, including heavy machinery like cranes, excavators,

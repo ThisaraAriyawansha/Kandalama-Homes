@@ -124,7 +124,7 @@ const CustomerReviews = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-sm leading-6 text-center text-black font-Poppins">
+                <p className="text-sm leading-6 text-justify text-black font-Poppins">
                   {review.feedback}
                 </p>
                 <div
@@ -166,7 +166,7 @@ const CustomerReviews = () => {
                 </div>
               </div>
             </div>
-            <p className="text-sm leading-6 text-left text-black font-Poppins">
+            <p className="text-sm leading-6 text-justify text-black font-Poppins">
               {review.feedback}
             </p>
             <div
