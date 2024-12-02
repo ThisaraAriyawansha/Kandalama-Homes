@@ -3,69 +3,38 @@ import React, { useEffect, useRef, useState } from 'react';
 const CustomerReviews = () => {
   const reviews = [
     {
-      name: 'Kasun Malinda',
-      image: '/images/Ellipse 2.jpg', // Replace with the actual image URL
+      name: 'H. Perera',
+      image: '/images/dummy-profile-pic-1.jpg', // Replace with the actual image URL
       rating: 5,
       company: 'Sigiri Arts',
       feedback:
         'Sigiri Arts provided outstanding services for our residential construction project. The team demonstrated professionalism, precision, and timely execution, making the experience smooth and hassle-free. Highly recommended for innovative solutions in the Sri Lankan construction industry.',
     },
     {
-      name: 'Ayesh Nimantha',
-      image: '/images/Ellipse 2 (1).jpg', // Replace with the actual image URL
+      name: 'H.M.K Silva',
+      image: '/images/dummy-profile-pic-1.jpg', // Replace with the actual image URL
       rating: 4,
       company: 'Sigiri Arts',
       feedback:
         'The project planning and execution by Sigiri Arts exceeded my expectations. Their focus on sustainability and local materials while maintaining quality sets them apart. Communication could improve slightly, but overall, they deliver great results.',
     },
     {
-      name: 'Nimasha Perera',
-      image: '/images/images (1).jpeg', // Replace with the actual image URL
+      name: 'Harendra Senarathna',
+      image: '/images/dummy-profile-pic-1.jpg', // Replace with the actual image URL
       rating: 5,
       company: 'Lanka Builders',
       feedback:
         'We partnered with Lanka Builders for an office renovation project. Their attention to detail and innovative ideas transformed our workspace into a functional and aesthetically pleasing environment. A true leader in Sri Lankan planning and construction.',
     },
     {
-      name: 'Tharindu Wijesekara',
-      image: '/images/images.jpeg', // Replace with the actual image URL
+      name: 'H.G Kanishkarandi',
+      image: '/images/dummy-profile-pic-female-300n300.jpg', // Replace with the actual image URL
       rating: 4,
       company: 'Sigiri Arts',
       feedback:
         'Sigiri Arts displayed an excellent commitment to deadlines and quality. Their team’s expertise in modern construction techniques was evident throughout the process. A slight improvement in cost transparency would make them flawless.',
     },
-    {
-      name: 'Lakmini Silva',
-      image: '/images/RoliSrivastavaprofilepicture.jpg', // Replace with the actual image URL
-      rating: 5,
-      company: 'Ceylon Constructions',
-      feedback:
-        'Ceylon Constructions delivered an impeccable service for our hotel project. Their design strategies perfectly blended traditional Sri Lankan aesthetics with modern architecture. I appreciate their dedication to customer satisfaction.',
-    },
-    {
-      name: 'Isuru Jayasinghe',
-      image: '/images/Mr.-Anish-Pillai.jpg', // Replace with the actual image URL
-      rating: 4,
-      company: 'Green Build Lanka',
-      feedback:
-        'Green Build Lanka has a strong focus on eco-friendly construction practices. They helped us design and build a sustainable home within a tight budget. Their expertise in renewable energy integration is commendable.',
-    },
-    {
-      name: 'Heshan Karunaratne',
-      image: '/images/Dr.-K-P-Gopal.jpg', // Replace with the actual image URL
-      rating: 5,
-      company: 'Urban Vision',
-      feedback:
-        'Urban Vision’s urban planning solutions are exceptional. They helped us develop a community space that’s both functional and environmentally conscious. Their dedication to sustainable growth is inspiring.',
-    },
-    {
-      name: 'Dulmini Rathnayake',
-      image: '/images/Kritika-Shah_Circle-01.png', // Replace with the actual image URL
-      rating: 5,
-      company: 'CeyBuild Co.',
-      feedback:
-        'CeyBuild Co. provided an outstanding service for our commercial building project. Their innovative designs and precise execution have left us thoroughly impressed. Excellent work!',
-    },
+    
   ];
   
 
