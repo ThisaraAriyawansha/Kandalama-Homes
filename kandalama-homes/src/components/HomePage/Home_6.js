@@ -6,33 +6,33 @@ const CustomerReviews = () => {
       name: 'H. Perera',
       image: '/images/dummy-profile-pic-1.jpg', // Replace with the actual image URL
       rating: 5,
-      company: 'Sigiri Arts',
+      company: 'Great Work and Service!',
       feedback:
-        'Sigiri Arts provided outstanding services for our residential construction project. The team demonstrated professionalism, precision, and timely execution, making the experience smooth and hassle-free. Highly recommended for innovative solutions in the Sri Lankan construction industry.',
+        'The team at Kandalama Homes did an excellent job on our house. They focused on every detail and kept us updated throughout the project. They also stayed within the agreed budget, which was a big relief.',
     },
     {
       name: 'H.M.K Silva',
       image: '/images/dummy-profile-pic-1.jpg', // Replace with the actual image URL
       rating: 4,
-      company: 'Sigiri Arts',
+      company: 'Smooth and Timely Work!',
       feedback:
-        'The project planning and execution by Sigiri Arts exceeded my expectations. Their focus on sustainability and local materials while maintaining quality sets them apart. Communication could improve slightly, but overall, they deliver great results.',
+        'The construction process was smooth and well-organized. The team was very professional and completed everything on time. The quality of the work was even better than we expected.',
     },
     {
       name: 'Harendra Senarathna',
       image: '/images/dummy-profile-pic-1.jpg', // Replace with the actual image URL
       rating: 5,
-      company: 'Lanka Builders',
+      company: 'Beautiful and Creative Designs!',
       feedback:
-        'We partnered with Lanka Builders for an office renovation project. Their attention to detail and innovative ideas transformed our workspace into a functional and aesthetically pleasing environment. A true leader in Sri Lankan planning and construction.',
+        'Kandalama Homes came up with great designs that perfectly matched our needs. The final result was not only beautiful but also practical.',
     },
     {
       name: 'H.G Kanishkarandi',
       image: '/images/dummy-profile-pic-female-300n300.jpg', // Replace with the actual image URL
       rating: 4,
-      company: 'Sigiri Arts',
+      company: 'Professional and Experienced Team!',
       feedback:
-        'Sigiri Arts displayed an excellent commitment to deadlines and quality. Their team’s expertise in modern construction techniques was evident throughout the process. A slight improvement in cost transparency would make them flawless.',
+        'The team was very professional and experienced. They took great care in handling every part of the project and did an outstanding job.',
     },
     
   ];
