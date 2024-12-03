@@ -28,7 +28,7 @@ const services = [
   },
   {
     title: "Landscape Architecture",
-    image: "/images/Rectangle 12 (1).jpg",
+    image: "/images/c6e6176dc948a4a667f9f85b9d4f3d38.jpeg",
   },
   {
     title: "Warehouse Construction",
@@ -69,7 +69,7 @@ const TeamSection = () => {
     >
       <div className="w-full h-full rounded-[47px] " style={{ backgroundColor: "rgba(0, 90, 78, 0.49)" }}>
         <div className="container p-8 mx-auto text-center text-white md:p-20">
-          <h2 className="mb-4 text-xl font-bold text-center lg:text-left sm:text-4xl font-quando">
+          <h2 className="mb-4 text-xl font-bold text-center lg:text-left md:text-4xl font-quando">
           OUR SERVICES
           </h2>
 
@@ -80,14 +80,14 @@ const TeamSection = () => {
     {services.map((service, index) => (
       <div
         key={index}
-        className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[30vh] md:h-[50vh]" // Adjusted md:h-[50vh]
+        className="flex flex-col items-center justify-center transition-shadow duration-300 bg-transparent shadow-md hover:shadow-xl h-[30vh] md:h-[70vh]" // Adjusted md:h-[50vh]
         onClick={() => handleCardClick(service.title)}
       >
-        <div className="relative justify-center w-full mb-4" style={{ height: "30vh", maxHeight: "50vh" }}> {/* Adjusted container height */}
+        <div className="relative justify-center w-full mb-4" style={{ height: "30vh", maxHeight: "70vh" }}> {/* Adjusted container height */}
           <img
             src={service.image}
             alt={service.title}
-            className="w-screen h-[30vh] md:h-[50vh] md:w-[80vw] border-4 border-white rounded-[5%]" // Added md:h-[50vh]
+            className="w-screen h-[30vh] md:h-[70vh] md:w-[80vw]  border-4 border-white rounded-[5%]" // Added md:h-[50vh]
           />
           {/* Title positioned at the center of the image */}
           <h3 className="absolute inset-0 flex items-center justify-center text-xs text-center text-white sm:text-lg font-sansita">
