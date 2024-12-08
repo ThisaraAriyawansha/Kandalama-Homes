@@ -13,6 +13,7 @@ import Villa_Construction_Home from "./components/Construction/Villa_Constructio
 import Cabana_Construction_Home from "./components/Construction/Cabana_Construction_Home/Cabana_Construction_Home";
 import Home_Construction_Home from "./components/Construction/Home_Construction_Home/Home_Construction_Home";
 import Services from "./components/Services/Services_New";
+import ProjectDetails from "./components/Project/ProjectDetails/ProjectDetails";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/Cabana_Construction_Home" element={<Cabana_Construction_Home />} />
         <Route path="/Home_Construction_Home" element={<Home_Construction_Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/projectDetails/:id" element={<ProjectDetails />} />
 
 
 
