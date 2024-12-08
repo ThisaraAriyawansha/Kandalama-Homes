@@ -13,7 +13,6 @@ const AboutUs = () => {
         <Navbar />
         <Project_1/>
         <Project_2/>
-        <Project_3/>
         <Footer/>
 
     </div>
