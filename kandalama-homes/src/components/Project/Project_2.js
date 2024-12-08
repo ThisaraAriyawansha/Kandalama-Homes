@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const settings = {
   dots: false, // Remove dots on mobile
@@ -71,11 +72,9 @@ const OngoingProjects = () => {
                 />
                 <div className="p-4 text-center">
                   <h3 className="mb-2 text-lg text-black font-poppins">{project.project_name}</h3>
-                  <button
-                    className="px-4 py-2 text-white bg-customGreen font-poppins"
-                  >
-                    View All Images
-                  </button>
+                  <button className="px-4 py-2 text-white bg-customGreen font-poppins">
+                  <Link to={`/projectDetails/${project.id}`}>View All Images</Link>
+                </button>
                 </div>
               </div>
             ))}
@@ -96,10 +95,8 @@ const OngoingProjects = () => {
                   />
                   <div className="p-4 text-center">
                     <h3 className="mb-2 text-lg text-black font-poppins">{project.project_name}</h3>
-                    <button
-                      className="px-4 py-2 text-white bg-customGreen font-poppins"
-                    >
-                      View All Images
+                    <button className="px-4 py-2 text-white bg-customGreen font-poppins">
+                      <Link to={`/projectDetails/${project.id}`}>View All Images</Link>
                     </button>
                   </div>
                 </div>
