@@ -10,6 +10,7 @@ const ProjectDetails = () => {
   const { id } = useParams();
   const [project, setProject] = useState(null);
   const [activeTab, setActiveTab] = useState("images");
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:8000/projects_web_image_video/${id}`)
@@ -28,6 +29,11 @@ const ProjectDetails = () => {
       </div>
     );
   }
+
+  // Truncate text if necessary
+  const shouldShowToggle = project.description.length > 150;
+  const truncatedText = project.description.substring(0, 150);
+  const toggleText = () => setIsExpanded(!isExpanded);
 
   // Slider settings
   const sliderSettings = {
@@ -61,16 +67,30 @@ const ProjectDetails = () => {
               <span className="text-base font-bold text-gray-900 sm:text-xl">{project.category_name}</span>
             </div>
 
-            {/* Project Description */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-              <span className="text-lg font-semibold text-gray-700 sm:text-xl">Project Description:</span>
-              <p className="text-base font-medium text-gray-900 sm:text-lg">{project.description}</p>
-            </div>
-
             {/* Client Name */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
               <span className="text-lg font-semibold text-gray-700 sm:text-xl">Client Name:</span>
               <span className="text-base font-bold text-gray-900 sm:text-xl">{project.client_name}</span>
+            </div>
+
+            {/* Project Description */}
+            <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-4">
+              <span className="text-lg font-semibold text-gray-700 sm:text-xl">Project Description:</span>
+              <p className="text-base font-medium text-justify text-gray-900 sm:text-lg">
+                {shouldShowToggle
+                  ? isExpanded
+                    ? project.description
+                    : `${truncatedText}...`
+                  : project.description}
+                {shouldShowToggle && (
+                  <button
+                    onClick={toggleText}
+                    className="ml-2 text-sm font-medium text-blue-600 hover:underline"
+                  >
+                    {isExpanded ? "Show less" : "Show more"}
+                  </button>
+                )}
+              </p>
             </div>
           </div>
 
@@ -175,7 +195,6 @@ const ProjectDetails = () => {
             )}
           </div>
         </div>
-
       </div>
 
       <Footer />
